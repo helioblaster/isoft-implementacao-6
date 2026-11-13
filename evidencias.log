@@ -2185,3 +2185,691 @@ make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapa
 rm -f banker result.txt
 make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/03_requisicoes'
 + 2026-11-13T09:39:44-03:00 rm -rf /tmp/tmp.59EvioP4OI
++ 2026-11-13T10:25:36-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/Makefile
+eb7a36cb9d809f61f21e149d24e3fca072685baeb9afae947b4319fc8622261f  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/Makefile
+++ 2026-11-13T10:25:36-03:00 seq 1 10
++ 2026-11-13T10:25:36-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:36-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 1
+STAGE=4 BATCH=11 REPETITION=1
++ 2026-11-13T10:25:36-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.otedJQzk3w/banker
++ 2026-11-13T10:25:37-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:37-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:37-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:37-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.otedJQzk3w/customer.txt
++ 2026-11-13T10:25:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.otedJQzk3w/commands.txt
++ 2026-11-13T10:25:37-03:00 cd /tmp/tmp.otedJQzk3w
++ 2026-11-13T10:25:37-03:00 ./banker 3
++ 2026-11-13T10:25:37-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.otedJQzk3w/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:37-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.otedJQzk3w/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:37-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.otedJQzk3w/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:37-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:37-03:00 rm -rf /tmp/tmp.otedJQzk3w
++ 2026-11-13T10:25:37-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:37-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 2
+STAGE=4 BATCH=11 REPETITION=2
++ 2026-11-13T10:25:37-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.NuwGZXElQZ/banker
++ 2026-11-13T10:25:37-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.NuwGZXElQZ/customer.txt
++ 2026-11-13T10:25:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.NuwGZXElQZ/commands.txt
++ 2026-11-13T10:25:38-03:00 cd /tmp/tmp.NuwGZXElQZ
++ 2026-11-13T10:25:38-03:00 ./banker 3
++ 2026-11-13T10:25:38-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.NuwGZXElQZ/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:38-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.NuwGZXElQZ/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:38-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.NuwGZXElQZ/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:38-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:38-03:00 rm -rf /tmp/tmp.NuwGZXElQZ
++ 2026-11-13T10:25:38-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:38-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 3
+STAGE=4 BATCH=11 REPETITION=3
++ 2026-11-13T10:25:38-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.kDnHZtxCg7/banker
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:38-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.kDnHZtxCg7/customer.txt
++ 2026-11-13T10:25:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.kDnHZtxCg7/commands.txt
++ 2026-11-13T10:25:38-03:00 cd /tmp/tmp.kDnHZtxCg7
++ 2026-11-13T10:25:38-03:00 ./banker 3
++ 2026-11-13T10:25:38-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.kDnHZtxCg7/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:38-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.kDnHZtxCg7/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:38-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.kDnHZtxCg7/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:38-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:38-03:00 rm -rf /tmp/tmp.kDnHZtxCg7
++ 2026-11-13T10:25:38-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:38-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 4
+STAGE=4 BATCH=11 REPETITION=4
++ 2026-11-13T10:25:38-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.b9Elzkl3wK/banker
++ 2026-11-13T10:25:39-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:39-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:39-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:39-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.b9Elzkl3wK/customer.txt
++ 2026-11-13T10:25:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.b9Elzkl3wK/commands.txt
++ 2026-11-13T10:25:39-03:00 cd /tmp/tmp.b9Elzkl3wK
++ 2026-11-13T10:25:39-03:00 ./banker 3
++ 2026-11-13T10:25:39-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.b9Elzkl3wK/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:39-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.b9Elzkl3wK/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:39-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.b9Elzkl3wK/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:39-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:39-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:39-03:00 rm -rf /tmp/tmp.b9Elzkl3wK
++ 2026-11-13T10:25:39-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:39-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 5
+STAGE=4 BATCH=11 REPETITION=5
++ 2026-11-13T10:25:39-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:39-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:39-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:40-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.Fldf8ApdfK/banker
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:40-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.Fldf8ApdfK/customer.txt
++ 2026-11-13T10:25:40-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.Fldf8ApdfK/commands.txt
++ 2026-11-13T10:25:40-03:00 cd /tmp/tmp.Fldf8ApdfK
++ 2026-11-13T10:25:40-03:00 ./banker 3
++ 2026-11-13T10:25:40-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.Fldf8ApdfK/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:40-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.Fldf8ApdfK/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:40-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.Fldf8ApdfK/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:40-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:40-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:40-03:00 rm -rf /tmp/tmp.Fldf8ApdfK
++ 2026-11-13T10:25:40-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:40-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 6
+STAGE=4 BATCH=11 REPETITION=6
++ 2026-11-13T10:25:40-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:40-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:40-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:40-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.6mxsnfGc6n/banker
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:40-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:40-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.6mxsnfGc6n/customer.txt
++ 2026-11-13T10:25:40-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.6mxsnfGc6n/commands.txt
++ 2026-11-13T10:25:40-03:00 cd /tmp/tmp.6mxsnfGc6n
++ 2026-11-13T10:25:40-03:00 ./banker 3
++ 2026-11-13T10:25:40-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.6mxsnfGc6n/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:40-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.6mxsnfGc6n/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:40-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.6mxsnfGc6n/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:40-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:40-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:40-03:00 rm -rf /tmp/tmp.6mxsnfGc6n
++ 2026-11-13T10:25:40-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:40-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 7
+STAGE=4 BATCH=11 REPETITION=7
++ 2026-11-13T10:25:40-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:41-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:41-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:41-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.k5wL6XDT1d/banker
++ 2026-11-13T10:25:41-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:41-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:41-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:41-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:41-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.k5wL6XDT1d/customer.txt
++ 2026-11-13T10:25:41-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.k5wL6XDT1d/commands.txt
++ 2026-11-13T10:25:41-03:00 cd /tmp/tmp.k5wL6XDT1d
++ 2026-11-13T10:25:41-03:00 ./banker 3
++ 2026-11-13T10:25:41-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.k5wL6XDT1d/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:41-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.k5wL6XDT1d/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:41-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.k5wL6XDT1d/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:41-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:41-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:41-03:00 rm -rf /tmp/tmp.k5wL6XDT1d
++ 2026-11-13T10:25:41-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:41-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 8
+STAGE=4 BATCH=11 REPETITION=8
++ 2026-11-13T10:25:41-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:41-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:41-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:42-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.D1a6qMKoMY/banker
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:42-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.D1a6qMKoMY/customer.txt
++ 2026-11-13T10:25:42-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.D1a6qMKoMY/commands.txt
++ 2026-11-13T10:25:42-03:00 cd /tmp/tmp.D1a6qMKoMY
++ 2026-11-13T10:25:42-03:00 ./banker 3
++ 2026-11-13T10:25:42-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.D1a6qMKoMY/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:42-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.D1a6qMKoMY/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:42-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.D1a6qMKoMY/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:42-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:42-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:42-03:00 rm -rf /tmp/tmp.D1a6qMKoMY
++ 2026-11-13T10:25:42-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:42-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 9
+STAGE=4 BATCH=11 REPETITION=9
++ 2026-11-13T10:25:42-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:42-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:42-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:42-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.PRfMbgrCSr/banker
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:42-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:42-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.PRfMbgrCSr/customer.txt
++ 2026-11-13T10:25:42-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.PRfMbgrCSr/commands.txt
++ 2026-11-13T10:25:42-03:00 cd /tmp/tmp.PRfMbgrCSr
++ 2026-11-13T10:25:42-03:00 ./banker 3
++ 2026-11-13T10:25:42-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.PRfMbgrCSr/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:42-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.PRfMbgrCSr/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:42-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.PRfMbgrCSr/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:42-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:42-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:42-03:00 rm -rf /tmp/tmp.PRfMbgrCSr
++ 2026-11-13T10:25:43-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:25:43-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 11 10
+STAGE=4 BATCH=11 REPETITION=10
++ 2026-11-13T10:25:43-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:25:43-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:43-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:43-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.Z4cMNamgIN/banker
++ 2026-11-13T10:25:43-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:25:43-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:25:43-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:25:43-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:25:43-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.Z4cMNamgIN/customer.txt
++ 2026-11-13T10:25:43-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.Z4cMNamgIN/commands.txt
++ 2026-11-13T10:25:43-03:00 cd /tmp/tmp.Z4cMNamgIN
++ 2026-11-13T10:25:43-03:00 ./banker 3
++ 2026-11-13T10:25:43-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.Z4cMNamgIN/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:25:43-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.Z4cMNamgIN/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:25:43-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.Z4cMNamgIN/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:25:43-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:25:43-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:25:43-03:00 rm -rf /tmp/tmp.Z4cMNamgIN
++ 2026-11-13T10:30:43-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/Makefile
+eb7a36cb9d809f61f21e149d24e3fca072685baeb9afae947b4319fc8622261f  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/Makefile
+++ 2026-11-13T10:30:43-03:00 seq 1 10
++ 2026-11-13T10:30:43-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:43-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 1
+STAGE=4 BATCH=12 REPETITION=1
++ 2026-11-13T10:30:43-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:43-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:43-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:44-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.Rln7DjCUEC/banker
++ 2026-11-13T10:30:44-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:44-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:44-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:44-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:44-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.Rln7DjCUEC/customer.txt
++ 2026-11-13T10:30:44-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.Rln7DjCUEC/commands.txt
++ 2026-11-13T10:30:44-03:00 cd /tmp/tmp.Rln7DjCUEC
++ 2026-11-13T10:30:44-03:00 ./banker 3
++ 2026-11-13T10:30:44-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.Rln7DjCUEC/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:44-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.Rln7DjCUEC/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:44-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.Rln7DjCUEC/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:44-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:44-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:44-03:00 rm -rf /tmp/tmp.Rln7DjCUEC
++ 2026-11-13T10:30:44-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:44-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 2
+STAGE=4 BATCH=12 REPETITION=2
++ 2026-11-13T10:30:44-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:44-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:44-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:45-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.eIhMI4jcIY/banker
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:45-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.eIhMI4jcIY/customer.txt
++ 2026-11-13T10:30:45-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.eIhMI4jcIY/commands.txt
++ 2026-11-13T10:30:45-03:00 cd /tmp/tmp.eIhMI4jcIY
++ 2026-11-13T10:30:45-03:00 ./banker 3
++ 2026-11-13T10:30:45-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.eIhMI4jcIY/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:45-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.eIhMI4jcIY/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:45-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.eIhMI4jcIY/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:45-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:45-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:45-03:00 rm -rf /tmp/tmp.eIhMI4jcIY
++ 2026-11-13T10:30:45-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:45-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 3
+STAGE=4 BATCH=12 REPETITION=3
++ 2026-11-13T10:30:45-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:45-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:45-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:45-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.vUXVIIng3L/banker
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:45-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:45-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.vUXVIIng3L/customer.txt
++ 2026-11-13T10:30:45-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.vUXVIIng3L/commands.txt
++ 2026-11-13T10:30:45-03:00 cd /tmp/tmp.vUXVIIng3L
++ 2026-11-13T10:30:45-03:00 ./banker 3
++ 2026-11-13T10:30:45-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.vUXVIIng3L/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:45-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.vUXVIIng3L/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:45-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.vUXVIIng3L/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:45-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:45-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:45-03:00 rm -rf /tmp/tmp.vUXVIIng3L
++ 2026-11-13T10:30:45-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:45-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 4
+STAGE=4 BATCH=12 REPETITION=4
++ 2026-11-13T10:30:45-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:46-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:46-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:46-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.qw1TRJEblI/banker
++ 2026-11-13T10:30:46-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:46-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:46-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:46-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:46-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.qw1TRJEblI/customer.txt
++ 2026-11-13T10:30:46-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.qw1TRJEblI/commands.txt
++ 2026-11-13T10:30:46-03:00 cd /tmp/tmp.qw1TRJEblI
++ 2026-11-13T10:30:46-03:00 ./banker 3
++ 2026-11-13T10:30:46-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.qw1TRJEblI/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:46-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.qw1TRJEblI/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:46-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.qw1TRJEblI/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:46-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:46-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:46-03:00 rm -rf /tmp/tmp.qw1TRJEblI
++ 2026-11-13T10:30:46-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:46-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 5
+STAGE=4 BATCH=12 REPETITION=5
++ 2026-11-13T10:30:46-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:46-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:46-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:47-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.ToGilPDkp8/banker
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:47-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.ToGilPDkp8/customer.txt
++ 2026-11-13T10:30:47-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.ToGilPDkp8/commands.txt
++ 2026-11-13T10:30:47-03:00 cd /tmp/tmp.ToGilPDkp8
++ 2026-11-13T10:30:47-03:00 ./banker 3
++ 2026-11-13T10:30:47-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.ToGilPDkp8/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:47-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.ToGilPDkp8/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:47-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.ToGilPDkp8/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:47-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:47-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:47-03:00 rm -rf /tmp/tmp.ToGilPDkp8
++ 2026-11-13T10:30:47-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:47-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 6
+STAGE=4 BATCH=12 REPETITION=6
++ 2026-11-13T10:30:47-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:47-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:47-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:47-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.TiwgIpRHRu/banker
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:47-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:47-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.TiwgIpRHRu/customer.txt
++ 2026-11-13T10:30:47-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.TiwgIpRHRu/commands.txt
++ 2026-11-13T10:30:47-03:00 cd /tmp/tmp.TiwgIpRHRu
++ 2026-11-13T10:30:47-03:00 ./banker 3
++ 2026-11-13T10:30:47-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.TiwgIpRHRu/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:47-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.TiwgIpRHRu/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:47-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.TiwgIpRHRu/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:47-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:47-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:47-03:00 rm -rf /tmp/tmp.TiwgIpRHRu
++ 2026-11-13T10:30:47-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:47-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 7
+STAGE=4 BATCH=12 REPETITION=7
++ 2026-11-13T10:30:47-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:47-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:47-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:48-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.ejQOqMl5SU/banker
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:48-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.ejQOqMl5SU/customer.txt
++ 2026-11-13T10:30:48-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.ejQOqMl5SU/commands.txt
++ 2026-11-13T10:30:48-03:00 cd /tmp/tmp.ejQOqMl5SU
++ 2026-11-13T10:30:48-03:00 ./banker 3
++ 2026-11-13T10:30:48-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.ejQOqMl5SU/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:48-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.ejQOqMl5SU/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:48-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.ejQOqMl5SU/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:48-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:48-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:48-03:00 rm -rf /tmp/tmp.ejQOqMl5SU
++ 2026-11-13T10:30:48-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:48-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 8
+STAGE=4 BATCH=12 REPETITION=8
++ 2026-11-13T10:30:48-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:48-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:48-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:48-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.biIuq7Lgk8/banker
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:48-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:48-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.biIuq7Lgk8/customer.txt
++ 2026-11-13T10:30:48-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.biIuq7Lgk8/commands.txt
++ 2026-11-13T10:30:48-03:00 cd /tmp/tmp.biIuq7Lgk8
++ 2026-11-13T10:30:48-03:00 ./banker 3
++ 2026-11-13T10:30:48-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.biIuq7Lgk8/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:49-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.biIuq7Lgk8/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:49-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.biIuq7Lgk8/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:49-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:49-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:49-03:00 rm -rf /tmp/tmp.biIuq7Lgk8
++ 2026-11-13T10:30:49-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:49-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 9
+STAGE=4 BATCH=12 REPETITION=9
++ 2026-11-13T10:30:49-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:49-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:49-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:49-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.ZXho0omW8W/banker
++ 2026-11-13T10:30:49-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:49-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:49-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:49-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:49-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.ZXho0omW8W/customer.txt
++ 2026-11-13T10:30:49-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.ZXho0omW8W/commands.txt
++ 2026-11-13T10:30:49-03:00 cd /tmp/tmp.ZXho0omW8W
++ 2026-11-13T10:30:49-03:00 ./banker 3
++ 2026-11-13T10:30:49-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.ZXho0omW8W/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:49-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.ZXho0omW8W/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:49-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.ZXho0omW8W/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:49-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:49-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:49-03:00 rm -rf /tmp/tmp.ZXho0omW8W
++ 2026-11-13T10:30:49-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-13T10:30:49-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 4 12 10
+STAGE=4 BATCH=12 REPETITION=10
++ 2026-11-13T10:30:49-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 4 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
++ 2026-11-13T10:30:49-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:49-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:50-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro/banker /tmp/tmp.cOGpGL4P8i/banker
++ 2026-11-13T10:30:50-03:00 '[' 4 -eq 1 ']'
++ 2026-11-13T10:30:50-03:00 '[' 4 -eq 2 ']'
++ 2026-11-13T10:30:50-03:00 '[' 4 -eq 3 ']'
++ 2026-11-13T10:30:50-03:00 '[' 4 -eq 4 ']'
++ 2026-11-13T10:30:50-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/customer.txt /tmp/tmp.cOGpGL4P8i/customer.txt
++ 2026-11-13T10:30:50-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage4/commands.txt /tmp/tmp.cOGpGL4P8i/commands.txt
++ 2026-11-13T10:30:50-03:00 cd /tmp/tmp.cOGpGL4P8i
++ 2026-11-13T10:30:50-03:00 ./banker 3
++ 2026-11-13T10:30:50-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.cOGpGL4P8i/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-13T10:30:50-03:00 grep -Fx 'The customer 1 request 1 was denied because result in an unsafe state' /tmp/tmp.cOGpGL4P8i/result.txt
+The customer 1 request 1 was denied because result in an unsafe state
++ 2026-11-13T10:30:50-03:00 grep -Fx 'AVAILABLE 1 ' /tmp/tmp.cOGpGL4P8i/result.txt
+AVAILABLE 1 
++ 2026-11-13T10:30:50-03:00 printf 'PASS stage 4\n'
+PASS stage 4
++ 2026-11-13T10:30:50-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
++ 2026-11-13T10:30:50-03:00 rm -rf /tmp/tmp.cOGpGL4P8i
