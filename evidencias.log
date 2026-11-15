@@ -2873,3 +2873,751 @@ make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapa
 rm -f banker result.txt
 make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/04_estado_seguro'
 + 2026-11-13T10:30:50-03:00 rm -rf /tmp/tmp.cOGpGL4P8i
++ 2026-11-15T12:14:25-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/Makefile
+298854ee36be03826fe5fe9c63618b56a7f55148a6f8dc6062ac0344e152ce65  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/Makefile
+++ 2026-11-15T12:14:25-03:00 seq 1 10
++ 2026-11-15T12:14:25-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:25-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 1
+STAGE=5 BATCH=13 REPETITION=1
++ 2026-11-15T12:14:25-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:25-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:25-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:26-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.d50S9VbXBU/banker
++ 2026-11-15T12:14:26-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:26-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:26-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:26-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:26-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:26-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.d50S9VbXBU/customer.txt
++ 2026-11-15T12:14:26-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.d50S9VbXBU/commands.txt
++ 2026-11-15T12:14:26-03:00 cd /tmp/tmp.d50S9VbXBU
++ 2026-11-15T12:14:26-03:00 ./banker 3
++ 2026-11-15T12:14:26-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.d50S9VbXBU/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:26-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.d50S9VbXBU/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:26-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.d50S9VbXBU/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:26-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.d50S9VbXBU/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:26-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:26-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:26-03:00 rm -rf /tmp/tmp.d50S9VbXBU
++ 2026-11-15T12:14:26-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:26-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 2
+STAGE=5 BATCH=13 REPETITION=2
++ 2026-11-15T12:14:26-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:26-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:26-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:27-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.Mt9HKSOQN5/banker
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:27-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.Mt9HKSOQN5/customer.txt
++ 2026-11-15T12:14:27-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.Mt9HKSOQN5/commands.txt
++ 2026-11-15T12:14:27-03:00 cd /tmp/tmp.Mt9HKSOQN5
++ 2026-11-15T12:14:27-03:00 ./banker 3
++ 2026-11-15T12:14:27-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.Mt9HKSOQN5/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:27-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.Mt9HKSOQN5/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:27-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.Mt9HKSOQN5/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:27-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.Mt9HKSOQN5/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:27-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:27-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:27-03:00 rm -rf /tmp/tmp.Mt9HKSOQN5
++ 2026-11-15T12:14:27-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:27-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 3
+STAGE=5 BATCH=13 REPETITION=3
++ 2026-11-15T12:14:27-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:27-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:27-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:27-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.tBXBR1b5DW/banker
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:27-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:27-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.tBXBR1b5DW/customer.txt
++ 2026-11-15T12:14:27-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.tBXBR1b5DW/commands.txt
++ 2026-11-15T12:14:27-03:00 cd /tmp/tmp.tBXBR1b5DW
++ 2026-11-15T12:14:27-03:00 ./banker 3
++ 2026-11-15T12:14:27-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.tBXBR1b5DW/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:27-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.tBXBR1b5DW/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:27-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.tBXBR1b5DW/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:28-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.tBXBR1b5DW/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:28-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:28-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:28-03:00 rm -rf /tmp/tmp.tBXBR1b5DW
++ 2026-11-15T12:14:28-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:28-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 4
+STAGE=5 BATCH=13 REPETITION=4
++ 2026-11-15T12:14:28-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:28-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:28-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:28-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.GYIjwD0xKy/banker
++ 2026-11-15T12:14:28-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:28-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:28-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:28-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:28-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:28-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.GYIjwD0xKy/customer.txt
++ 2026-11-15T12:14:28-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.GYIjwD0xKy/commands.txt
++ 2026-11-15T12:14:28-03:00 cd /tmp/tmp.GYIjwD0xKy
++ 2026-11-15T12:14:28-03:00 ./banker 3
++ 2026-11-15T12:14:28-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.GYIjwD0xKy/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:28-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.GYIjwD0xKy/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:28-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.GYIjwD0xKy/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:28-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.GYIjwD0xKy/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:28-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:28-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:28-03:00 rm -rf /tmp/tmp.GYIjwD0xKy
++ 2026-11-15T12:14:29-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:29-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 5
+STAGE=5 BATCH=13 REPETITION=5
++ 2026-11-15T12:14:29-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:29-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:29-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:29-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.NVFbeQzce5/banker
++ 2026-11-15T12:14:29-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:29-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:29-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:29-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:29-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:29-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.NVFbeQzce5/customer.txt
++ 2026-11-15T12:14:29-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.NVFbeQzce5/commands.txt
++ 2026-11-15T12:14:29-03:00 cd /tmp/tmp.NVFbeQzce5
++ 2026-11-15T12:14:29-03:00 ./banker 3
++ 2026-11-15T12:14:29-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.NVFbeQzce5/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:29-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.NVFbeQzce5/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:29-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.NVFbeQzce5/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:29-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.NVFbeQzce5/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:29-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:29-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:29-03:00 rm -rf /tmp/tmp.NVFbeQzce5
++ 2026-11-15T12:14:29-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:29-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 6
+STAGE=5 BATCH=13 REPETITION=6
++ 2026-11-15T12:14:29-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:29-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:29-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:30-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.KYsYEakTJb/banker
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:30-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.KYsYEakTJb/customer.txt
++ 2026-11-15T12:14:30-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.KYsYEakTJb/commands.txt
++ 2026-11-15T12:14:30-03:00 cd /tmp/tmp.KYsYEakTJb
++ 2026-11-15T12:14:30-03:00 ./banker 3
++ 2026-11-15T12:14:30-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.KYsYEakTJb/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:30-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.KYsYEakTJb/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:30-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.KYsYEakTJb/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:30-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.KYsYEakTJb/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:30-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:30-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:30-03:00 rm -rf /tmp/tmp.KYsYEakTJb
++ 2026-11-15T12:14:30-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:30-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 7
+STAGE=5 BATCH=13 REPETITION=7
++ 2026-11-15T12:14:30-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:30-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:30-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:30-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.YeELm4fSSo/banker
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:30-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:30-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.YeELm4fSSo/customer.txt
++ 2026-11-15T12:14:30-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.YeELm4fSSo/commands.txt
++ 2026-11-15T12:14:30-03:00 cd /tmp/tmp.YeELm4fSSo
++ 2026-11-15T12:14:30-03:00 ./banker 3
++ 2026-11-15T12:14:30-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.YeELm4fSSo/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:30-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.YeELm4fSSo/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:30-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.YeELm4fSSo/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:30-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.YeELm4fSSo/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:30-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:31-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:31-03:00 rm -rf /tmp/tmp.YeELm4fSSo
++ 2026-11-15T12:14:31-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:31-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 8
+STAGE=5 BATCH=13 REPETITION=8
++ 2026-11-15T12:14:31-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:31-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:31-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:31-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.2Qe71bSOTO/banker
++ 2026-11-15T12:14:31-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:31-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:31-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:31-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:31-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:31-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.2Qe71bSOTO/customer.txt
++ 2026-11-15T12:14:31-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.2Qe71bSOTO/commands.txt
++ 2026-11-15T12:14:31-03:00 cd /tmp/tmp.2Qe71bSOTO
++ 2026-11-15T12:14:31-03:00 ./banker 3
++ 2026-11-15T12:14:31-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.2Qe71bSOTO/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:31-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.2Qe71bSOTO/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:31-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.2Qe71bSOTO/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:31-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.2Qe71bSOTO/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:31-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:31-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:31-03:00 rm -rf /tmp/tmp.2Qe71bSOTO
++ 2026-11-15T12:14:31-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:31-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 9
+STAGE=5 BATCH=13 REPETITION=9
++ 2026-11-15T12:14:31-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:31-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:31-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:32-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.mxsqE9fryD/banker
++ 2026-11-15T12:14:32-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:32-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:32-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:32-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:32-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:32-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.mxsqE9fryD/customer.txt
++ 2026-11-15T12:14:32-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.mxsqE9fryD/commands.txt
++ 2026-11-15T12:14:32-03:00 cd /tmp/tmp.mxsqE9fryD
++ 2026-11-15T12:14:32-03:00 ./banker 3
++ 2026-11-15T12:14:32-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.mxsqE9fryD/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:32-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.mxsqE9fryD/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:32-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.mxsqE9fryD/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:32-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.mxsqE9fryD/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:32-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:32-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:32-03:00 rm -rf /tmp/tmp.mxsqE9fryD
++ 2026-11-15T12:14:32-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:14:32-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 13 10
+STAGE=5 BATCH=13 REPETITION=10
++ 2026-11-15T12:14:32-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:14:32-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:32-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:33-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.sn01WIvLZr/banker
++ 2026-11-15T12:14:33-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:14:33-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:14:33-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:14:33-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:14:33-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:14:33-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.sn01WIvLZr/customer.txt
++ 2026-11-15T12:14:33-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.sn01WIvLZr/commands.txt
++ 2026-11-15T12:14:33-03:00 cd /tmp/tmp.sn01WIvLZr
++ 2026-11-15T12:14:33-03:00 ./banker 3
++ 2026-11-15T12:14:33-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.sn01WIvLZr/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:14:33-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.sn01WIvLZr/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:14:33-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.sn01WIvLZr/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:14:33-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.sn01WIvLZr/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:14:33-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:14:33-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:14:33-03:00 rm -rf /tmp/tmp.sn01WIvLZr
++ 2026-11-15T12:19:33-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/Makefile
+298854ee36be03826fe5fe9c63618b56a7f55148a6f8dc6062ac0344e152ce65  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/Makefile
+++ 2026-11-15T12:19:33-03:00 seq 1 10
++ 2026-11-15T12:19:33-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:33-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 1
+STAGE=5 BATCH=14 REPETITION=1
++ 2026-11-15T12:19:33-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:33-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:33-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:33-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.8awlbk1ATx/banker
++ 2026-11-15T12:19:33-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:33-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:33-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:33-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:33-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:33-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.8awlbk1ATx/customer.txt
++ 2026-11-15T12:19:33-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.8awlbk1ATx/commands.txt
++ 2026-11-15T12:19:33-03:00 cd /tmp/tmp.8awlbk1ATx
++ 2026-11-15T12:19:33-03:00 ./banker 3
++ 2026-11-15T12:19:33-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.8awlbk1ATx/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:33-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.8awlbk1ATx/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:33-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.8awlbk1ATx/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:33-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.8awlbk1ATx/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:33-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:33-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:33-03:00 rm -rf /tmp/tmp.8awlbk1ATx
++ 2026-11-15T12:19:34-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:34-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 2
+STAGE=5 BATCH=14 REPETITION=2
++ 2026-11-15T12:19:34-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:34-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:34-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:34-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.OgOqwxdtSb/banker
++ 2026-11-15T12:19:34-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:34-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:34-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:34-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:34-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:34-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.OgOqwxdtSb/customer.txt
++ 2026-11-15T12:19:34-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.OgOqwxdtSb/commands.txt
++ 2026-11-15T12:19:34-03:00 cd /tmp/tmp.OgOqwxdtSb
++ 2026-11-15T12:19:34-03:00 ./banker 3
++ 2026-11-15T12:19:34-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.OgOqwxdtSb/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:34-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.OgOqwxdtSb/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:34-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.OgOqwxdtSb/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:34-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.OgOqwxdtSb/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:34-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:34-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:34-03:00 rm -rf /tmp/tmp.OgOqwxdtSb
++ 2026-11-15T12:19:34-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:34-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 3
+STAGE=5 BATCH=14 REPETITION=3
++ 2026-11-15T12:19:34-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:34-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:34-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:35-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.38qjjcp07V/banker
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:35-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.38qjjcp07V/customer.txt
++ 2026-11-15T12:19:35-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.38qjjcp07V/commands.txt
++ 2026-11-15T12:19:35-03:00 cd /tmp/tmp.38qjjcp07V
++ 2026-11-15T12:19:35-03:00 ./banker 3
++ 2026-11-15T12:19:35-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.38qjjcp07V/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:35-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.38qjjcp07V/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:35-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.38qjjcp07V/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:35-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.38qjjcp07V/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:35-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:35-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:35-03:00 rm -rf /tmp/tmp.38qjjcp07V
++ 2026-11-15T12:19:35-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:35-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 4
+STAGE=5 BATCH=14 REPETITION=4
++ 2026-11-15T12:19:35-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:35-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:35-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:35-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.hyvao5KbEB/banker
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:35-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:35-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.hyvao5KbEB/customer.txt
++ 2026-11-15T12:19:35-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.hyvao5KbEB/commands.txt
++ 2026-11-15T12:19:35-03:00 cd /tmp/tmp.hyvao5KbEB
++ 2026-11-15T12:19:35-03:00 ./banker 3
++ 2026-11-15T12:19:35-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.hyvao5KbEB/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:35-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.hyvao5KbEB/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:35-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.hyvao5KbEB/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:35-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.hyvao5KbEB/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:35-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:35-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:35-03:00 rm -rf /tmp/tmp.hyvao5KbEB
++ 2026-11-15T12:19:35-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:35-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 5
+STAGE=5 BATCH=14 REPETITION=5
++ 2026-11-15T12:19:35-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:36-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.MDGX4sZg05/banker
++ 2026-11-15T12:19:36-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:36-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:36-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:36-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:36-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:36-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.MDGX4sZg05/customer.txt
++ 2026-11-15T12:19:36-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.MDGX4sZg05/commands.txt
++ 2026-11-15T12:19:36-03:00 cd /tmp/tmp.MDGX4sZg05
++ 2026-11-15T12:19:36-03:00 ./banker 3
++ 2026-11-15T12:19:36-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.MDGX4sZg05/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:36-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.MDGX4sZg05/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:36-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.MDGX4sZg05/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:36-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.MDGX4sZg05/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:36-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:36-03:00 rm -rf /tmp/tmp.MDGX4sZg05
++ 2026-11-15T12:19:36-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:36-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 6
+STAGE=5 BATCH=14 REPETITION=6
++ 2026-11-15T12:19:36-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:36-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.cMZJoJ7PAv/banker
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.cMZJoJ7PAv/customer.txt
++ 2026-11-15T12:19:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.cMZJoJ7PAv/commands.txt
++ 2026-11-15T12:19:37-03:00 cd /tmp/tmp.cMZJoJ7PAv
++ 2026-11-15T12:19:37-03:00 ./banker 3
++ 2026-11-15T12:19:37-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.cMZJoJ7PAv/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:37-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.cMZJoJ7PAv/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:37-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.cMZJoJ7PAv/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:37-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.cMZJoJ7PAv/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:37-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:37-03:00 rm -rf /tmp/tmp.cMZJoJ7PAv
++ 2026-11-15T12:19:37-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:37-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 7
+STAGE=5 BATCH=14 REPETITION=7
++ 2026-11-15T12:19:37-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.2QKjZSg6wa/banker
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:37-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.2QKjZSg6wa/customer.txt
++ 2026-11-15T12:19:37-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.2QKjZSg6wa/commands.txt
++ 2026-11-15T12:19:37-03:00 cd /tmp/tmp.2QKjZSg6wa
++ 2026-11-15T12:19:37-03:00 ./banker 3
++ 2026-11-15T12:19:37-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.2QKjZSg6wa/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:37-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.2QKjZSg6wa/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:37-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.2QKjZSg6wa/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:37-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.2QKjZSg6wa/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:37-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:37-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:37-03:00 rm -rf /tmp/tmp.2QKjZSg6wa
++ 2026-11-15T12:19:38-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:38-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 8
+STAGE=5 BATCH=14 REPETITION=8
++ 2026-11-15T12:19:38-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.QB5EMfslwM/banker
++ 2026-11-15T12:19:38-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:38-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:38-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:38-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:38-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.QB5EMfslwM/customer.txt
++ 2026-11-15T12:19:38-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.QB5EMfslwM/commands.txt
++ 2026-11-15T12:19:38-03:00 cd /tmp/tmp.QB5EMfslwM
++ 2026-11-15T12:19:38-03:00 ./banker 3
++ 2026-11-15T12:19:38-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.QB5EMfslwM/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:38-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.QB5EMfslwM/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:38-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.QB5EMfslwM/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:38-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.QB5EMfslwM/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:38-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:38-03:00 rm -rf /tmp/tmp.QB5EMfslwM
++ 2026-11-15T12:19:38-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:38-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 9
+STAGE=5 BATCH=14 REPETITION=9
++ 2026-11-15T12:19:38-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:38-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.ZfT400i4AI/banker
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.ZfT400i4AI/customer.txt
++ 2026-11-15T12:19:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.ZfT400i4AI/commands.txt
++ 2026-11-15T12:19:39-03:00 cd /tmp/tmp.ZfT400i4AI
++ 2026-11-15T12:19:39-03:00 ./banker 3
++ 2026-11-15T12:19:39-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.ZfT400i4AI/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:39-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.ZfT400i4AI/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:39-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.ZfT400i4AI/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:39-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.ZfT400i4AI/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:39-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:39-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:39-03:00 rm -rf /tmp/tmp.ZfT400i4AI
++ 2026-11-15T12:19:39-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T12:19:39-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 5 14 10
+STAGE=5 BATCH=14 REPETITION=10
++ 2026-11-15T12:19:39-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 5 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
++ 2026-11-15T12:19:39-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:39-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos/banker /tmp/tmp.hzjoSKNb0L/banker
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 1 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 2 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 3 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 4 ']'
++ 2026-11-15T12:19:39-03:00 '[' 5 -eq 5 ']'
++ 2026-11-15T12:19:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/customer.txt /tmp/tmp.hzjoSKNb0L/customer.txt
++ 2026-11-15T12:19:39-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/stage5/commands.txt /tmp/tmp.hzjoSKNb0L/commands.txt
++ 2026-11-15T12:19:39-03:00 cd /tmp/tmp.hzjoSKNb0L
++ 2026-11-15T12:19:40-03:00 ./banker 3
++ 2026-11-15T12:19:40-03:00 grep -Fx 'Allocate to customer 0 the resources 2' /tmp/tmp.hzjoSKNb0L/result.txt
+Allocate to customer 0 the resources 2
++ 2026-11-15T12:19:40-03:00 grep -Fx 'Release from customer 0 the resources 1' /tmp/tmp.hzjoSKNb0L/result.txt
+Release from customer 0 the resources 1
++ 2026-11-15T12:19:40-03:00 grep -Fx 'The customer 0 cannot release 2 because it exceeds its allocation' /tmp/tmp.hzjoSKNb0L/result.txt
+The customer 0 cannot release 2 because it exceeds its allocation
++ 2026-11-15T12:19:40-03:00 grep -Fx 'AVAILABLE 2 ' /tmp/tmp.hzjoSKNb0L/result.txt
+AVAILABLE 2 
++ 2026-11-15T12:19:40-03:00 printf 'PASS stage 5\n'
+PASS stage 5
++ 2026-11-15T12:19:40-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
++ 2026-11-15T12:19:40-03:00 rm -rf /tmp/tmp.hzjoSKNb0L

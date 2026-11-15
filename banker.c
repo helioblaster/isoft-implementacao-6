@@ -1,5 +1,5 @@
 #define _POSIX_C_SOURCE 200809L
-#define BANKER_STAGE 4
+#define BANKER_STAGE 5
 
 #include <ctype.h>
 #include <errno.h>
