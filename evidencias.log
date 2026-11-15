@@ -3621,3 +3621,751 @@ make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapa
 rm -f banker result.txt
 make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/05_liberacoes_e_comandos'
 + 2026-11-15T12:19:40-03:00 rm -rf /tmp/tmp.hzjoSKNb0L
++ 2026-11-15T13:04:11-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/Makefile
+205d41d4a00bb08dc7a960446f8e6fc72e331524425fbdea5a1675f5f020a253  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/Makefile
+++ 2026-11-15T13:04:11-03:00 seq 1 10
++ 2026-11-15T13:04:11-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:11-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 1
+STAGE=6 BATCH=15 REPETITION=1
++ 2026-11-15T13:04:11-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.d5xqN0jmXo/banker
++ 2026-11-15T13:04:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.d5xqN0jmXo/customer.txt
++ 2026-11-15T13:04:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.d5xqN0jmXo/commands.txt
++ 2026-11-15T13:04:12-03:00 cd /tmp/tmp.d5xqN0jmXo
++ 2026-11-15T13:04:12-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:12-03:00 set +e
++ 2026-11-15T13:04:12-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.d5xqN0jmXo/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.d5xqN0jmXo/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:12-03:00 status=1
++ 2026-11-15T13:04:12-03:00 set -e
++ 2026-11-15T13:04:12-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:12-03:00 test 1 -eq 1
++ 2026-11-15T13:04:12-03:00 od -An -t x1
++ 2026-11-15T13:04:12-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:12-03:00 od -An -t x1
++ 2026-11-15T13:04:12-03:00 sed -n 13p /tmp/tmp.d5xqN0jmXo/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:12-03:00 rm -rf /tmp/tmp.d5xqN0jmXo
++ 2026-11-15T13:04:12-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:12-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 2
+STAGE=6 BATCH=15 REPETITION=2
++ 2026-11-15T13:04:12-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.6schycJAs5/banker
++ 2026-11-15T13:04:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.6schycJAs5/customer.txt
++ 2026-11-15T13:04:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.6schycJAs5/commands.txt
++ 2026-11-15T13:04:13-03:00 cd /tmp/tmp.6schycJAs5
++ 2026-11-15T13:04:13-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:13-03:00 set +e
++ 2026-11-15T13:04:13-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.6schycJAs5/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.6schycJAs5/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:13-03:00 status=1
++ 2026-11-15T13:04:13-03:00 set -e
++ 2026-11-15T13:04:13-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:13-03:00 test 1 -eq 1
++ 2026-11-15T13:04:13-03:00 od -An -t x1
++ 2026-11-15T13:04:13-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:13-03:00 od -An -t x1
++ 2026-11-15T13:04:13-03:00 sed -n 13p /tmp/tmp.6schycJAs5/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:13-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:13-03:00 rm -rf /tmp/tmp.6schycJAs5
++ 2026-11-15T13:04:13-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:13-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 3
+STAGE=6 BATCH=15 REPETITION=3
++ 2026-11-15T13:04:13-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:13-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:13-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.O0TPxYGwuF/banker
++ 2026-11-15T13:04:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.O0TPxYGwuF/customer.txt
++ 2026-11-15T13:04:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.O0TPxYGwuF/commands.txt
++ 2026-11-15T13:04:14-03:00 cd /tmp/tmp.O0TPxYGwuF
++ 2026-11-15T13:04:14-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:14-03:00 set +e
++ 2026-11-15T13:04:14-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.O0TPxYGwuF/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.O0TPxYGwuF/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:14-03:00 status=1
++ 2026-11-15T13:04:14-03:00 set -e
++ 2026-11-15T13:04:14-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:14-03:00 test 1 -eq 1
++ 2026-11-15T13:04:14-03:00 od -An -t x1
++ 2026-11-15T13:04:14-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:14-03:00 sed -n 13p /tmp/tmp.O0TPxYGwuF/result.txt
++ 2026-11-15T13:04:14-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:14-03:00 rm -rf /tmp/tmp.O0TPxYGwuF
++ 2026-11-15T13:04:14-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:14-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 4
+STAGE=6 BATCH=15 REPETITION=4
++ 2026-11-15T13:04:14-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.Yxf6ygakQl/banker
++ 2026-11-15T13:04:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.Yxf6ygakQl/customer.txt
++ 2026-11-15T13:04:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.Yxf6ygakQl/commands.txt
++ 2026-11-15T13:04:14-03:00 cd /tmp/tmp.Yxf6ygakQl
++ 2026-11-15T13:04:14-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:14-03:00 set +e
++ 2026-11-15T13:04:14-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.Yxf6ygakQl/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.Yxf6ygakQl/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:14-03:00 status=1
++ 2026-11-15T13:04:14-03:00 set -e
++ 2026-11-15T13:04:14-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:14-03:00 test 1 -eq 1
++ 2026-11-15T13:04:14-03:00 od -An -t x1
++ 2026-11-15T13:04:14-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:14-03:00 sed -n 13p /tmp/tmp.Yxf6ygakQl/result.txt
++ 2026-11-15T13:04:14-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:14-03:00 rm -rf /tmp/tmp.Yxf6ygakQl
++ 2026-11-15T13:04:14-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:14-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 5
+STAGE=6 BATCH=15 REPETITION=5
++ 2026-11-15T13:04:14-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.P5EqeSAFh5/banker
++ 2026-11-15T13:04:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.P5EqeSAFh5/customer.txt
++ 2026-11-15T13:04:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.P5EqeSAFh5/commands.txt
++ 2026-11-15T13:04:15-03:00 cd /tmp/tmp.P5EqeSAFh5
++ 2026-11-15T13:04:15-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:15-03:00 set +e
++ 2026-11-15T13:04:15-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.P5EqeSAFh5/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.P5EqeSAFh5/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:15-03:00 status=1
++ 2026-11-15T13:04:15-03:00 set -e
++ 2026-11-15T13:04:15-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:15-03:00 test 1 -eq 1
++ 2026-11-15T13:04:15-03:00 od -An -t x1
++ 2026-11-15T13:04:15-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:15-03:00 sed -n 13p /tmp/tmp.P5EqeSAFh5/result.txt
++ 2026-11-15T13:04:15-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:15-03:00 rm -rf /tmp/tmp.P5EqeSAFh5
++ 2026-11-15T13:04:15-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:15-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 6
+STAGE=6 BATCH=15 REPETITION=6
++ 2026-11-15T13:04:15-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.YRQUlepIwu/banker
++ 2026-11-15T13:04:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.YRQUlepIwu/customer.txt
++ 2026-11-15T13:04:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.YRQUlepIwu/commands.txt
++ 2026-11-15T13:04:16-03:00 cd /tmp/tmp.YRQUlepIwu
++ 2026-11-15T13:04:16-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:16-03:00 set +e
++ 2026-11-15T13:04:16-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.YRQUlepIwu/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.YRQUlepIwu/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:16-03:00 status=1
++ 2026-11-15T13:04:16-03:00 set -e
++ 2026-11-15T13:04:16-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:16-03:00 test 1 -eq 1
++ 2026-11-15T13:04:16-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:04:16-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:16-03:00 sed -n 13p /tmp/tmp.YRQUlepIwu/result.txt
++ 2026-11-15T13:04:16-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:16-03:00 rm -rf /tmp/tmp.YRQUlepIwu
++ 2026-11-15T13:04:16-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:16-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 7
+STAGE=6 BATCH=15 REPETITION=7
++ 2026-11-15T13:04:16-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.m4ByrcwnN5/banker
++ 2026-11-15T13:04:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.m4ByrcwnN5/customer.txt
++ 2026-11-15T13:04:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.m4ByrcwnN5/commands.txt
++ 2026-11-15T13:04:16-03:00 cd /tmp/tmp.m4ByrcwnN5
++ 2026-11-15T13:04:16-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:16-03:00 set +e
++ 2026-11-15T13:04:16-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.m4ByrcwnN5/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.m4ByrcwnN5/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:16-03:00 status=1
++ 2026-11-15T13:04:16-03:00 set -e
++ 2026-11-15T13:04:16-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:16-03:00 test 1 -eq 1
++ 2026-11-15T13:04:16-03:00 od -An -t x1
++ 2026-11-15T13:04:16-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:16-03:00 od -An -t x1
++ 2026-11-15T13:04:16-03:00 sed -n 13p /tmp/tmp.m4ByrcwnN5/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:16-03:00 rm -rf /tmp/tmp.m4ByrcwnN5
++ 2026-11-15T13:04:16-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:16-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 8
+STAGE=6 BATCH=15 REPETITION=8
++ 2026-11-15T13:04:16-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.gazgAebBFC/banker
++ 2026-11-15T13:04:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.gazgAebBFC/customer.txt
++ 2026-11-15T13:04:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.gazgAebBFC/commands.txt
++ 2026-11-15T13:04:17-03:00 cd /tmp/tmp.gazgAebBFC
++ 2026-11-15T13:04:17-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:17-03:00 set +e
++ 2026-11-15T13:04:17-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.gazgAebBFC/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.gazgAebBFC/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:17-03:00 status=1
++ 2026-11-15T13:04:17-03:00 set -e
++ 2026-11-15T13:04:17-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:17-03:00 test 1 -eq 1
++ 2026-11-15T13:04:17-03:00 od -An -t x1
++ 2026-11-15T13:04:17-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:17-03:00 od -An -t x1
++ 2026-11-15T13:04:17-03:00 sed -n 13p /tmp/tmp.gazgAebBFC/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:17-03:00 rm -rf /tmp/tmp.gazgAebBFC
++ 2026-11-15T13:04:17-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:17-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 9
+STAGE=6 BATCH=15 REPETITION=9
++ 2026-11-15T13:04:17-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.ZN5UjvMGYu/banker
++ 2026-11-15T13:04:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.ZN5UjvMGYu/customer.txt
++ 2026-11-15T13:04:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.ZN5UjvMGYu/commands.txt
++ 2026-11-15T13:04:17-03:00 cd /tmp/tmp.ZN5UjvMGYu
++ 2026-11-15T13:04:17-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:17-03:00 set +e
++ 2026-11-15T13:04:17-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ZN5UjvMGYu/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ZN5UjvMGYu/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:17-03:00 status=1
++ 2026-11-15T13:04:18-03:00 set -e
++ 2026-11-15T13:04:18-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:18-03:00 test 1 -eq 1
++ 2026-11-15T13:04:18-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:04:18-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:18-03:00 sed -n 13p /tmp/tmp.ZN5UjvMGYu/result.txt
++ 2026-11-15T13:04:18-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:18-03:00 rm -rf /tmp/tmp.ZN5UjvMGYu
++ 2026-11-15T13:04:18-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:04:18-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 15 10
+STAGE=6 BATCH=15 REPETITION=10
++ 2026-11-15T13:04:18-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:04:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.ppgJeZ2Uip/banker
++ 2026-11-15T13:04:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.ppgJeZ2Uip/customer.txt
++ 2026-11-15T13:04:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.ppgJeZ2Uip/commands.txt
++ 2026-11-15T13:04:18-03:00 cd /tmp/tmp.ppgJeZ2Uip
++ 2026-11-15T13:04:18-03:00 ./banker 10 5 7
++ 2026-11-15T13:04:18-03:00 set +e
++ 2026-11-15T13:04:18-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ppgJeZ2Uip/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ppgJeZ2Uip/result.txt differ: byte 495, line 13
++ 2026-11-15T13:04:18-03:00 status=1
++ 2026-11-15T13:04:18-03:00 set -e
++ 2026-11-15T13:04:18-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:04:18-03:00 test 1 -eq 1
++ 2026-11-15T13:04:18-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:04:18-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:04:18-03:00 sed -n 13p /tmp/tmp.ppgJeZ2Uip/result.txt
++ 2026-11-15T13:04:18-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:04:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:04:18-03:00 rm -rf /tmp/tmp.ppgJeZ2Uip
++ 2026-11-15T13:09:18-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/Makefile
+205d41d4a00bb08dc7a960446f8e6fc72e331524425fbdea5a1675f5f020a253  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/Makefile
+++ 2026-11-15T13:09:18-03:00 seq 1 10
++ 2026-11-15T13:09:18-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:18-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 1
+STAGE=6 BATCH=16 REPETITION=1
++ 2026-11-15T13:09:18-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.Yt0N4yzcNq/banker
++ 2026-11-15T13:09:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.Yt0N4yzcNq/customer.txt
++ 2026-11-15T13:09:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.Yt0N4yzcNq/commands.txt
++ 2026-11-15T13:09:19-03:00 cd /tmp/tmp.Yt0N4yzcNq
++ 2026-11-15T13:09:19-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:19-03:00 set +e
++ 2026-11-15T13:09:19-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.Yt0N4yzcNq/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.Yt0N4yzcNq/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:19-03:00 status=1
++ 2026-11-15T13:09:19-03:00 set -e
++ 2026-11-15T13:09:19-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:19-03:00 test 1 -eq 1
++ 2026-11-15T13:09:19-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:09:19-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:19-03:00 od -An -t x1
++ 2026-11-15T13:09:19-03:00 sed -n 13p /tmp/tmp.Yt0N4yzcNq/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:19-03:00 rm -rf /tmp/tmp.Yt0N4yzcNq
++ 2026-11-15T13:09:19-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:19-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 2
+STAGE=6 BATCH=16 REPETITION=2
++ 2026-11-15T13:09:19-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:20-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.QwxtAFrLTD/banker
++ 2026-11-15T13:09:20-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.QwxtAFrLTD/customer.txt
++ 2026-11-15T13:09:20-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.QwxtAFrLTD/commands.txt
++ 2026-11-15T13:09:20-03:00 cd /tmp/tmp.QwxtAFrLTD
++ 2026-11-15T13:09:20-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:20-03:00 set +e
++ 2026-11-15T13:09:20-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.QwxtAFrLTD/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.QwxtAFrLTD/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:20-03:00 status=1
++ 2026-11-15T13:09:20-03:00 set -e
++ 2026-11-15T13:09:20-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:20-03:00 test 1 -eq 1
++ 2026-11-15T13:09:20-03:00 od -An -t x1
++ 2026-11-15T13:09:20-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:20-03:00 od -An -t x1
++ 2026-11-15T13:09:20-03:00 sed -n 13p /tmp/tmp.QwxtAFrLTD/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:20-03:00 rm -rf /tmp/tmp.QwxtAFrLTD
++ 2026-11-15T13:09:20-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:20-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 3
+STAGE=6 BATCH=16 REPETITION=3
++ 2026-11-15T13:09:20-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:20-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.4UDP14GHiG/banker
++ 2026-11-15T13:09:20-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.4UDP14GHiG/customer.txt
++ 2026-11-15T13:09:20-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.4UDP14GHiG/commands.txt
++ 2026-11-15T13:09:20-03:00 cd /tmp/tmp.4UDP14GHiG
++ 2026-11-15T13:09:20-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:20-03:00 set +e
++ 2026-11-15T13:09:20-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.4UDP14GHiG/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.4UDP14GHiG/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:20-03:00 status=1
++ 2026-11-15T13:09:20-03:00 set -e
++ 2026-11-15T13:09:20-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:20-03:00 test 1 -eq 1
++ 2026-11-15T13:09:20-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:09:20-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:20-03:00 sed -n 13p /tmp/tmp.4UDP14GHiG/result.txt
++ 2026-11-15T13:09:20-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:20-03:00 rm -rf /tmp/tmp.4UDP14GHiG
++ 2026-11-15T13:09:20-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:20-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 4
+STAGE=6 BATCH=16 REPETITION=4
++ 2026-11-15T13:09:20-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:21-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.xKLlGL8Zt1/banker
++ 2026-11-15T13:09:21-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.xKLlGL8Zt1/customer.txt
++ 2026-11-15T13:09:21-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.xKLlGL8Zt1/commands.txt
++ 2026-11-15T13:09:21-03:00 cd /tmp/tmp.xKLlGL8Zt1
++ 2026-11-15T13:09:21-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:21-03:00 set +e
++ 2026-11-15T13:09:21-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.xKLlGL8Zt1/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.xKLlGL8Zt1/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:21-03:00 status=1
++ 2026-11-15T13:09:21-03:00 set -e
++ 2026-11-15T13:09:21-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:21-03:00 test 1 -eq 1
++ 2026-11-15T13:09:21-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:09:21-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:21-03:00 sed -n 13p /tmp/tmp.xKLlGL8Zt1/result.txt
++ 2026-11-15T13:09:21-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:21-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:21-03:00 rm -rf /tmp/tmp.xKLlGL8Zt1
++ 2026-11-15T13:09:21-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:21-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 5
+STAGE=6 BATCH=16 REPETITION=5
++ 2026-11-15T13:09:21-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:21-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:21-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:21-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.ysibaPaGuG/banker
++ 2026-11-15T13:09:21-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.ysibaPaGuG/customer.txt
++ 2026-11-15T13:09:21-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.ysibaPaGuG/commands.txt
++ 2026-11-15T13:09:21-03:00 cd /tmp/tmp.ysibaPaGuG
++ 2026-11-15T13:09:21-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:21-03:00 set +e
++ 2026-11-15T13:09:22-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ysibaPaGuG/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ysibaPaGuG/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:22-03:00 status=1
++ 2026-11-15T13:09:22-03:00 set -e
++ 2026-11-15T13:09:22-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:22-03:00 test 1 -eq 1
++ 2026-11-15T13:09:22-03:00 od -An -t x1
++ 2026-11-15T13:09:22-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:22-03:00 sed -n 13p /tmp/tmp.ysibaPaGuG/result.txt
++ 2026-11-15T13:09:22-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:22-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:22-03:00 rm -rf /tmp/tmp.ysibaPaGuG
++ 2026-11-15T13:09:22-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:22-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 6
+STAGE=6 BATCH=16 REPETITION=6
++ 2026-11-15T13:09:22-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:22-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:22-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:22-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.usEm6VSS3J/banker
++ 2026-11-15T13:09:22-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.usEm6VSS3J/customer.txt
++ 2026-11-15T13:09:22-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.usEm6VSS3J/commands.txt
++ 2026-11-15T13:09:22-03:00 cd /tmp/tmp.usEm6VSS3J
++ 2026-11-15T13:09:22-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:22-03:00 set +e
++ 2026-11-15T13:09:22-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.usEm6VSS3J/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.usEm6VSS3J/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:22-03:00 status=1
++ 2026-11-15T13:09:22-03:00 set -e
++ 2026-11-15T13:09:22-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:22-03:00 test 1 -eq 1
++ 2026-11-15T13:09:22-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:09:22-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:22-03:00 od -An -t x1
++ 2026-11-15T13:09:22-03:00 sed -n 13p /tmp/tmp.usEm6VSS3J/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:22-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:22-03:00 rm -rf /tmp/tmp.usEm6VSS3J
++ 2026-11-15T13:09:22-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:22-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 7
+STAGE=6 BATCH=16 REPETITION=7
++ 2026-11-15T13:09:22-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:22-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:22-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:23-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.BlNDYrpLse/banker
++ 2026-11-15T13:09:23-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.BlNDYrpLse/customer.txt
++ 2026-11-15T13:09:23-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.BlNDYrpLse/commands.txt
++ 2026-11-15T13:09:23-03:00 cd /tmp/tmp.BlNDYrpLse
++ 2026-11-15T13:09:23-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:23-03:00 set +e
++ 2026-11-15T13:09:23-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.BlNDYrpLse/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.BlNDYrpLse/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:23-03:00 status=1
++ 2026-11-15T13:09:23-03:00 set -e
++ 2026-11-15T13:09:23-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:23-03:00 test 1 -eq 1
++ 2026-11-15T13:09:23-03:00 od -An -t x1
++ 2026-11-15T13:09:23-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:23-03:00 sed -n 13p /tmp/tmp.BlNDYrpLse/result.txt
++ 2026-11-15T13:09:23-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:23-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:23-03:00 rm -rf /tmp/tmp.BlNDYrpLse
++ 2026-11-15T13:09:23-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:23-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 8
+STAGE=6 BATCH=16 REPETITION=8
++ 2026-11-15T13:09:23-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:23-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:23-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:23-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.6mKjhgMIpN/banker
++ 2026-11-15T13:09:23-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.6mKjhgMIpN/customer.txt
++ 2026-11-15T13:09:23-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.6mKjhgMIpN/commands.txt
++ 2026-11-15T13:09:23-03:00 cd /tmp/tmp.6mKjhgMIpN
++ 2026-11-15T13:09:23-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:23-03:00 set +e
++ 2026-11-15T13:09:23-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.6mKjhgMIpN/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.6mKjhgMIpN/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:23-03:00 status=1
++ 2026-11-15T13:09:23-03:00 set -e
++ 2026-11-15T13:09:23-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:23-03:00 test 1 -eq 1
++ 2026-11-15T13:09:23-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:09:23-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:23-03:00 sed -n 13p /tmp/tmp.6mKjhgMIpN/result.txt
++ 2026-11-15T13:09:23-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:24-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:24-03:00 rm -rf /tmp/tmp.6mKjhgMIpN
++ 2026-11-15T13:09:24-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:24-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 9
+STAGE=6 BATCH=16 REPETITION=9
++ 2026-11-15T13:09:24-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:24-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:24-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:24-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.pmEg4HbRRx/banker
++ 2026-11-15T13:09:24-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.pmEg4HbRRx/customer.txt
++ 2026-11-15T13:09:24-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.pmEg4HbRRx/commands.txt
++ 2026-11-15T13:09:24-03:00 cd /tmp/tmp.pmEg4HbRRx
++ 2026-11-15T13:09:24-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:24-03:00 set +e
++ 2026-11-15T13:09:24-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.pmEg4HbRRx/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.pmEg4HbRRx/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:24-03:00 status=1
++ 2026-11-15T13:09:24-03:00 set -e
++ 2026-11-15T13:09:24-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:24-03:00 test 1 -eq 1
++ 2026-11-15T13:09:24-03:00 od -An -t x1
++ 2026-11-15T13:09:24-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:24-03:00 sed -n 13p /tmp/tmp.pmEg4HbRRx/result.txt
++ 2026-11-15T13:09:24-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:24-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:24-03:00 rm -rf /tmp/tmp.pmEg4HbRRx
++ 2026-11-15T13:09:24-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T13:09:24-03:00 printf 'STAGE=6 BATCH=%d REPETITION=%d\n' 16 10
+STAGE=6 BATCH=16 REPETITION=10
++ 2026-11-15T13:09:24-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage6_format_error.sh
++ 2026-11-15T13:09:24-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:24-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:25-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros/banker /tmp/tmp.WDwfP4a7fg/banker
++ 2026-11-15T13:09:25-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.WDwfP4a7fg/customer.txt
++ 2026-11-15T13:09:25-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.WDwfP4a7fg/commands.txt
++ 2026-11-15T13:09:25-03:00 cd /tmp/tmp.WDwfP4a7fg
++ 2026-11-15T13:09:25-03:00 ./banker 10 5 7
++ 2026-11-15T13:09:25-03:00 set +e
++ 2026-11-15T13:09:25-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.WDwfP4a7fg/result.txt
+/mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.WDwfP4a7fg/result.txt differ: byte 495, line 13
++ 2026-11-15T13:09:25-03:00 status=1
++ 2026-11-15T13:09:25-03:00 set -e
++ 2026-11-15T13:09:25-03:00 printf 'cmp_exit=%d\n' 1
+cmp_exit=1
++ 2026-11-15T13:09:25-03:00 test 1 -eq 1
++ 2026-11-15T13:09:25-03:00 sed -n 13p /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt
++ 2026-11-15T13:09:25-03:00 od -An -t x1
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 20
+ 0a
++ 2026-11-15T13:09:25-03:00 od -An -t x1
++ 2026-11-15T13:09:25-03:00 sed -n 13p /tmp/tmp.WDwfP4a7fg/result.txt
+ 41 56 41 49 4c 41 42 4c 45 20 33 20 33 20 32 0a
++ 2026-11-15T13:09:25-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
++ 2026-11-15T13:09:25-03:00 rm -rf /tmp/tmp.WDwfP4a7fg
