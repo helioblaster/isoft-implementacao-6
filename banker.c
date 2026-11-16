@@ -412,7 +412,7 @@ static void write_state(FILE *output, const Banker *banker)
     fputc('\n', output);
 }
 
-static bool is_safe(const Banker *banker)
+static bool estado_segurro(const Banker *banker)
 {
     long *work = checked_calloc(banker->resources, sizeof(long));
     bool *finished = checked_calloc(banker->customers, sizeof(bool));
@@ -488,7 +488,7 @@ static void request_resources(FILE *output, Banker *banker, const Command *comma
         banker->need[base + resource] -= command->values[resource];
     }
 
-    if (check_safety && !is_safe(banker)) {
+    if (check_safety && !estado_segurro(banker)) {
         for (size_t resource = 0; resource < banker->resources; resource++) {
             banker->available[resource] += command->values[resource];
             banker->allocation[base + resource] -= command->values[resource];
@@ -510,10 +510,7 @@ static void release_resources(FILE *output, Banker *banker, const Command *comma
     size_t base = command->customer * banker->resources;
     for (size_t resource = 0; resource < banker->resources; resource++) {
         if (command->values[resource] > banker->allocation[base + resource]) {
-            fprintf(output, "The customer %zu cannot release ", command->customer);
-            write_vector(output, command->values, banker->resources, false);
-            fputs(" because it exceeds its allocation\n", output);
-            return;
+            fail("a release exceeds the customer's allocation");
         }
     }
 
