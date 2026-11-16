@@ -1,5 +1,5 @@
 #define _POSIX_C_SOURCE 200809L
-#define BANKER_STAGE 6
+#define BANKER_STAGE 7
 
 #include <ctype.h>
 #include <errno.h>
@@ -408,7 +408,7 @@ static void write_state(FILE *output, const Banker *banker)
     }
 
     fputs("AVAILABLE ", output);
-    write_vector(output, banker->available, banker->resources, false);
+    write_vector(output, banker->available, banker->resources, true);
     fputc('\n', output);
 }
 

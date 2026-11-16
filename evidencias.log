@@ -4369,3 +4369,1331 @@ make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapa
 rm -f banker result.txt
 make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/06_integracao_e_erros'
 + 2026-11-15T13:09:25-03:00 rm -rf /tmp/tmp.WDwfP4a7fg
++ 2026-11-15T23:39:03-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/Makefile
+90924d5e95e1e9a8372e140f2bebd03dbb65f0f271fe581f7985aa01cbfb2aa7  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/Makefile
+++ 2026-11-15T23:39:03-03:00 seq 1 10
++ 2026-11-15T23:39:03-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:03-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 1
+STAGE=7 BATCH=17 REPETITION=1
++ 2026-11-15T23:39:03-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:03-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:03-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:03-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.1BILqktt4u/banker
++ 2026-11-15T23:39:03-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:03-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:03-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:03-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:03-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:03-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.1BILqktt4u/customer.txt
++ 2026-11-15T23:39:03-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.1BILqktt4u/commands.txt
++ 2026-11-15T23:39:03-03:00 cd /tmp/tmp.1BILqktt4u
++ 2026-11-15T23:39:03-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:03-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.1BILqktt4u/result.txt
++ 2026-11-15T23:39:03-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.1BILqktt4u/customer.txt
++ 2026-11-15T23:39:03-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.1BILqktt4u/commands.txt
++ 2026-11-15T23:39:03-03:00 cd /tmp/tmp.1BILqktt4u
++ 2026-11-15T23:39:03-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:03-03:00 set +e
++ 2026-11-15T23:39:03-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:03-03:00 status=1
++ 2026-11-15T23:39:03-03:00 set -e
++ 2026-11-15T23:39:03-03:00 cat /tmp/tmp.1BILqktt4u/stdout.txt
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.1BILqktt4u/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:04-03:00 test 1 -ne 0
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.1BILqktt4u/customer.txt
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.1BILqktt4u/commands.txt
++ 2026-11-15T23:39:04-03:00 cd /tmp/tmp.1BILqktt4u
++ 2026-11-15T23:39:04-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 set +e
++ 2026-11-15T23:39:04-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 status=1
++ 2026-11-15T23:39:04-03:00 set -e
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.1BILqktt4u/stdout.txt
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.1BILqktt4u/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:04-03:00 test 1 -ne 0
++ 2026-11-15T23:39:04-03:00 rm -f /tmp/tmp.1BILqktt4u/customer.txt /tmp/tmp.1BILqktt4u/commands.txt
++ 2026-11-15T23:39:04-03:00 cd /tmp/tmp.1BILqktt4u
++ 2026-11-15T23:39:04-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 set +e
++ 2026-11-15T23:39:04-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 status=1
++ 2026-11-15T23:39:04-03:00 set -e
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.1BILqktt4u/stdout.txt
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.1BILqktt4u/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:04-03:00 test 1 -ne 0
++ 2026-11-15T23:39:04-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:04-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:04-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:04-03:00 rm -rf /tmp/tmp.1BILqktt4u
++ 2026-11-15T23:39:04-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:04-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 2
+STAGE=7 BATCH=17 REPETITION=2
++ 2026-11-15T23:39:04-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:04-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:04-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.pJRTO7pkMd/banker
++ 2026-11-15T23:39:04-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:04-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:04-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:04-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:04-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.pJRTO7pkMd/customer.txt
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.pJRTO7pkMd/commands.txt
++ 2026-11-15T23:39:04-03:00 cd /tmp/tmp.pJRTO7pkMd
++ 2026-11-15T23:39:04-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:04-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.pJRTO7pkMd/result.txt
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.pJRTO7pkMd/customer.txt
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.pJRTO7pkMd/commands.txt
++ 2026-11-15T23:39:04-03:00 cd /tmp/tmp.pJRTO7pkMd
++ 2026-11-15T23:39:04-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 set +e
++ 2026-11-15T23:39:04-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 status=1
++ 2026-11-15T23:39:04-03:00 set -e
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.pJRTO7pkMd/stdout.txt
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.pJRTO7pkMd/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:04-03:00 test 1 -ne 0
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.pJRTO7pkMd/customer.txt
++ 2026-11-15T23:39:04-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.pJRTO7pkMd/commands.txt
++ 2026-11-15T23:39:04-03:00 cd /tmp/tmp.pJRTO7pkMd
++ 2026-11-15T23:39:04-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 set +e
++ 2026-11-15T23:39:04-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:04-03:00 status=1
++ 2026-11-15T23:39:04-03:00 set -e
++ 2026-11-15T23:39:04-03:00 cat /tmp/tmp.pJRTO7pkMd/stdout.txt
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.pJRTO7pkMd/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:05-03:00 test 1 -ne 0
++ 2026-11-15T23:39:05-03:00 rm -f /tmp/tmp.pJRTO7pkMd/customer.txt /tmp/tmp.pJRTO7pkMd/commands.txt
++ 2026-11-15T23:39:05-03:00 cd /tmp/tmp.pJRTO7pkMd
++ 2026-11-15T23:39:05-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:05-03:00 set +e
++ 2026-11-15T23:39:05-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:05-03:00 status=1
++ 2026-11-15T23:39:05-03:00 set -e
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.pJRTO7pkMd/stdout.txt
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.pJRTO7pkMd/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:05-03:00 test 1 -ne 0
++ 2026-11-15T23:39:05-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:05-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:05-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:05-03:00 rm -rf /tmp/tmp.pJRTO7pkMd
++ 2026-11-15T23:39:05-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:05-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 3
+STAGE=7 BATCH=17 REPETITION=3
++ 2026-11-15T23:39:05-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:05-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:05-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.kZPCcF19n7/banker
++ 2026-11-15T23:39:05-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:05-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:05-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:05-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:05-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.kZPCcF19n7/customer.txt
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.kZPCcF19n7/commands.txt
++ 2026-11-15T23:39:05-03:00 cd /tmp/tmp.kZPCcF19n7
++ 2026-11-15T23:39:05-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:05-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.kZPCcF19n7/result.txt
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.kZPCcF19n7/customer.txt
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.kZPCcF19n7/commands.txt
++ 2026-11-15T23:39:05-03:00 cd /tmp/tmp.kZPCcF19n7
++ 2026-11-15T23:39:05-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:05-03:00 set +e
++ 2026-11-15T23:39:05-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:05-03:00 status=1
++ 2026-11-15T23:39:05-03:00 set -e
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.kZPCcF19n7/stdout.txt
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.kZPCcF19n7/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:05-03:00 test 1 -ne 0
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.kZPCcF19n7/customer.txt
++ 2026-11-15T23:39:05-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.kZPCcF19n7/commands.txt
++ 2026-11-15T23:39:05-03:00 cd /tmp/tmp.kZPCcF19n7
++ 2026-11-15T23:39:05-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:05-03:00 set +e
++ 2026-11-15T23:39:05-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:05-03:00 status=1
++ 2026-11-15T23:39:05-03:00 set -e
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.kZPCcF19n7/stdout.txt
++ 2026-11-15T23:39:05-03:00 cat /tmp/tmp.kZPCcF19n7/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:06-03:00 test 1 -ne 0
++ 2026-11-15T23:39:06-03:00 rm -f /tmp/tmp.kZPCcF19n7/customer.txt /tmp/tmp.kZPCcF19n7/commands.txt
++ 2026-11-15T23:39:06-03:00 cd /tmp/tmp.kZPCcF19n7
++ 2026-11-15T23:39:06-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 set +e
++ 2026-11-15T23:39:06-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 status=1
++ 2026-11-15T23:39:06-03:00 set -e
++ 2026-11-15T23:39:06-03:00 cat /tmp/tmp.kZPCcF19n7/stdout.txt
++ 2026-11-15T23:39:06-03:00 cat /tmp/tmp.kZPCcF19n7/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:06-03:00 test 1 -ne 0
++ 2026-11-15T23:39:06-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:06-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:06-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:06-03:00 rm -rf /tmp/tmp.kZPCcF19n7
++ 2026-11-15T23:39:06-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:06-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 4
+STAGE=7 BATCH=17 REPETITION=4
++ 2026-11-15T23:39:06-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:06-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:06-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.ZfYPGE1mPQ/banker
++ 2026-11-15T23:39:06-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:06-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:06-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:06-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:06-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.ZfYPGE1mPQ/customer.txt
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.ZfYPGE1mPQ/commands.txt
++ 2026-11-15T23:39:06-03:00 cd /tmp/tmp.ZfYPGE1mPQ
++ 2026-11-15T23:39:06-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:06-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ZfYPGE1mPQ/result.txt
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.ZfYPGE1mPQ/customer.txt
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.ZfYPGE1mPQ/commands.txt
++ 2026-11-15T23:39:06-03:00 cd /tmp/tmp.ZfYPGE1mPQ
++ 2026-11-15T23:39:06-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 set +e
++ 2026-11-15T23:39:06-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 status=1
++ 2026-11-15T23:39:06-03:00 set -e
++ 2026-11-15T23:39:06-03:00 cat /tmp/tmp.ZfYPGE1mPQ/stdout.txt
++ 2026-11-15T23:39:06-03:00 cat /tmp/tmp.ZfYPGE1mPQ/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:06-03:00 test 1 -ne 0
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.ZfYPGE1mPQ/customer.txt
++ 2026-11-15T23:39:06-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.ZfYPGE1mPQ/commands.txt
++ 2026-11-15T23:39:06-03:00 cd /tmp/tmp.ZfYPGE1mPQ
++ 2026-11-15T23:39:06-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 set +e
++ 2026-11-15T23:39:06-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 status=1
++ 2026-11-15T23:39:06-03:00 set -e
++ 2026-11-15T23:39:06-03:00 cat /tmp/tmp.ZfYPGE1mPQ/stdout.txt
++ 2026-11-15T23:39:06-03:00 cat /tmp/tmp.ZfYPGE1mPQ/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:06-03:00 test 1 -ne 0
++ 2026-11-15T23:39:06-03:00 rm -f /tmp/tmp.ZfYPGE1mPQ/customer.txt /tmp/tmp.ZfYPGE1mPQ/commands.txt
++ 2026-11-15T23:39:06-03:00 cd /tmp/tmp.ZfYPGE1mPQ
++ 2026-11-15T23:39:06-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 set +e
++ 2026-11-15T23:39:06-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:06-03:00 status=1
++ 2026-11-15T23:39:06-03:00 set -e
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.ZfYPGE1mPQ/stdout.txt
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.ZfYPGE1mPQ/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:07-03:00 test 1 -ne 0
++ 2026-11-15T23:39:07-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:07-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:07-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:07-03:00 rm -rf /tmp/tmp.ZfYPGE1mPQ
++ 2026-11-15T23:39:07-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:07-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 5
+STAGE=7 BATCH=17 REPETITION=5
++ 2026-11-15T23:39:07-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:07-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:07-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.8IYqpeJdSZ/banker
++ 2026-11-15T23:39:07-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:07-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:07-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:07-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:07-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.8IYqpeJdSZ/customer.txt
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.8IYqpeJdSZ/commands.txt
++ 2026-11-15T23:39:07-03:00 cd /tmp/tmp.8IYqpeJdSZ
++ 2026-11-15T23:39:07-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:07-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.8IYqpeJdSZ/result.txt
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.8IYqpeJdSZ/customer.txt
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.8IYqpeJdSZ/commands.txt
++ 2026-11-15T23:39:07-03:00 cd /tmp/tmp.8IYqpeJdSZ
++ 2026-11-15T23:39:07-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:07-03:00 set +e
++ 2026-11-15T23:39:07-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:07-03:00 status=1
++ 2026-11-15T23:39:07-03:00 set -e
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.8IYqpeJdSZ/stdout.txt
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.8IYqpeJdSZ/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:07-03:00 test 1 -ne 0
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.8IYqpeJdSZ/customer.txt
++ 2026-11-15T23:39:07-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.8IYqpeJdSZ/commands.txt
++ 2026-11-15T23:39:07-03:00 cd /tmp/tmp.8IYqpeJdSZ
++ 2026-11-15T23:39:07-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:07-03:00 set +e
++ 2026-11-15T23:39:07-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:07-03:00 status=1
++ 2026-11-15T23:39:07-03:00 set -e
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.8IYqpeJdSZ/stdout.txt
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.8IYqpeJdSZ/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:07-03:00 test 1 -ne 0
++ 2026-11-15T23:39:07-03:00 rm -f /tmp/tmp.8IYqpeJdSZ/customer.txt /tmp/tmp.8IYqpeJdSZ/commands.txt
++ 2026-11-15T23:39:07-03:00 cd /tmp/tmp.8IYqpeJdSZ
++ 2026-11-15T23:39:07-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:07-03:00 set +e
++ 2026-11-15T23:39:07-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:07-03:00 status=1
++ 2026-11-15T23:39:07-03:00 set -e
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.8IYqpeJdSZ/stdout.txt
++ 2026-11-15T23:39:07-03:00 cat /tmp/tmp.8IYqpeJdSZ/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:07-03:00 test 1 -ne 0
++ 2026-11-15T23:39:07-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:08-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:08-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:08-03:00 rm -rf /tmp/tmp.8IYqpeJdSZ
++ 2026-11-15T23:39:08-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:08-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 6
+STAGE=7 BATCH=17 REPETITION=6
++ 2026-11-15T23:39:08-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:08-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:08-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.lvJRNmypTi/banker
++ 2026-11-15T23:39:08-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:08-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:08-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:08-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:08-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.lvJRNmypTi/customer.txt
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.lvJRNmypTi/commands.txt
++ 2026-11-15T23:39:08-03:00 cd /tmp/tmp.lvJRNmypTi
++ 2026-11-15T23:39:08-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:08-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.lvJRNmypTi/result.txt
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.lvJRNmypTi/customer.txt
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.lvJRNmypTi/commands.txt
++ 2026-11-15T23:39:08-03:00 cd /tmp/tmp.lvJRNmypTi
++ 2026-11-15T23:39:08-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:08-03:00 set +e
++ 2026-11-15T23:39:08-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:08-03:00 status=1
++ 2026-11-15T23:39:08-03:00 set -e
++ 2026-11-15T23:39:08-03:00 cat /tmp/tmp.lvJRNmypTi/stdout.txt
++ 2026-11-15T23:39:08-03:00 cat /tmp/tmp.lvJRNmypTi/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:08-03:00 test 1 -ne 0
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.lvJRNmypTi/customer.txt
++ 2026-11-15T23:39:08-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.lvJRNmypTi/commands.txt
++ 2026-11-15T23:39:08-03:00 cd /tmp/tmp.lvJRNmypTi
++ 2026-11-15T23:39:08-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:08-03:00 set +e
++ 2026-11-15T23:39:08-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:08-03:00 status=1
++ 2026-11-15T23:39:08-03:00 set -e
++ 2026-11-15T23:39:08-03:00 cat /tmp/tmp.lvJRNmypTi/stdout.txt
++ 2026-11-15T23:39:08-03:00 cat /tmp/tmp.lvJRNmypTi/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:08-03:00 test 1 -ne 0
++ 2026-11-15T23:39:08-03:00 rm -f /tmp/tmp.lvJRNmypTi/customer.txt /tmp/tmp.lvJRNmypTi/commands.txt
++ 2026-11-15T23:39:08-03:00 cd /tmp/tmp.lvJRNmypTi
++ 2026-11-15T23:39:08-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:08-03:00 set +e
++ 2026-11-15T23:39:08-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:08-03:00 status=1
++ 2026-11-15T23:39:08-03:00 set -e
++ 2026-11-15T23:39:08-03:00 cat /tmp/tmp.lvJRNmypTi/stdout.txt
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.lvJRNmypTi/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:09-03:00 test 1 -ne 0
++ 2026-11-15T23:39:09-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:09-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:09-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:09-03:00 rm -rf /tmp/tmp.lvJRNmypTi
++ 2026-11-15T23:39:09-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:09-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 7
+STAGE=7 BATCH=17 REPETITION=7
++ 2026-11-15T23:39:09-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:09-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:09-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.cZ8OlkLJTW/banker
++ 2026-11-15T23:39:09-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:09-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:09-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:09-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:09-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.cZ8OlkLJTW/customer.txt
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.cZ8OlkLJTW/commands.txt
++ 2026-11-15T23:39:09-03:00 cd /tmp/tmp.cZ8OlkLJTW
++ 2026-11-15T23:39:09-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:09-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.cZ8OlkLJTW/result.txt
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.cZ8OlkLJTW/customer.txt
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.cZ8OlkLJTW/commands.txt
++ 2026-11-15T23:39:09-03:00 cd /tmp/tmp.cZ8OlkLJTW
++ 2026-11-15T23:39:09-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:09-03:00 set +e
++ 2026-11-15T23:39:09-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:09-03:00 status=1
++ 2026-11-15T23:39:09-03:00 set -e
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.cZ8OlkLJTW/stdout.txt
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.cZ8OlkLJTW/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:09-03:00 test 1 -ne 0
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.cZ8OlkLJTW/customer.txt
++ 2026-11-15T23:39:09-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.cZ8OlkLJTW/commands.txt
++ 2026-11-15T23:39:09-03:00 cd /tmp/tmp.cZ8OlkLJTW
++ 2026-11-15T23:39:09-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:09-03:00 set +e
++ 2026-11-15T23:39:09-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:09-03:00 status=1
++ 2026-11-15T23:39:09-03:00 set -e
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.cZ8OlkLJTW/stdout.txt
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.cZ8OlkLJTW/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:09-03:00 test 1 -ne 0
++ 2026-11-15T23:39:09-03:00 rm -f /tmp/tmp.cZ8OlkLJTW/customer.txt /tmp/tmp.cZ8OlkLJTW/commands.txt
++ 2026-11-15T23:39:09-03:00 cd /tmp/tmp.cZ8OlkLJTW
++ 2026-11-15T23:39:09-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:09-03:00 set +e
++ 2026-11-15T23:39:09-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:09-03:00 status=1
++ 2026-11-15T23:39:09-03:00 set -e
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.cZ8OlkLJTW/stdout.txt
++ 2026-11-15T23:39:09-03:00 cat /tmp/tmp.cZ8OlkLJTW/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:09-03:00 test 1 -ne 0
++ 2026-11-15T23:39:09-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:09-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:09-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:09-03:00 rm -rf /tmp/tmp.cZ8OlkLJTW
++ 2026-11-15T23:39:09-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:09-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 8
+STAGE=7 BATCH=17 REPETITION=8
++ 2026-11-15T23:39:09-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:09-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:09-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.iSaDDxRi2l/banker
++ 2026-11-15T23:39:10-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:10-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:10-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:10-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:10-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.iSaDDxRi2l/customer.txt
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.iSaDDxRi2l/commands.txt
++ 2026-11-15T23:39:10-03:00 cd /tmp/tmp.iSaDDxRi2l
++ 2026-11-15T23:39:10-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:10-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.iSaDDxRi2l/result.txt
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.iSaDDxRi2l/customer.txt
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.iSaDDxRi2l/commands.txt
++ 2026-11-15T23:39:10-03:00 cd /tmp/tmp.iSaDDxRi2l
++ 2026-11-15T23:39:10-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:10-03:00 set +e
++ 2026-11-15T23:39:10-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:10-03:00 status=1
++ 2026-11-15T23:39:10-03:00 set -e
++ 2026-11-15T23:39:10-03:00 cat /tmp/tmp.iSaDDxRi2l/stdout.txt
++ 2026-11-15T23:39:10-03:00 cat /tmp/tmp.iSaDDxRi2l/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:10-03:00 test 1 -ne 0
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.iSaDDxRi2l/customer.txt
++ 2026-11-15T23:39:10-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.iSaDDxRi2l/commands.txt
++ 2026-11-15T23:39:10-03:00 cd /tmp/tmp.iSaDDxRi2l
++ 2026-11-15T23:39:10-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:10-03:00 set +e
++ 2026-11-15T23:39:10-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:10-03:00 status=1
++ 2026-11-15T23:39:10-03:00 set -e
++ 2026-11-15T23:39:10-03:00 cat /tmp/tmp.iSaDDxRi2l/stdout.txt
++ 2026-11-15T23:39:10-03:00 cat /tmp/tmp.iSaDDxRi2l/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:10-03:00 test 1 -ne 0
++ 2026-11-15T23:39:10-03:00 rm -f /tmp/tmp.iSaDDxRi2l/customer.txt /tmp/tmp.iSaDDxRi2l/commands.txt
++ 2026-11-15T23:39:10-03:00 cd /tmp/tmp.iSaDDxRi2l
++ 2026-11-15T23:39:10-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:10-03:00 set +e
++ 2026-11-15T23:39:10-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:10-03:00 status=1
++ 2026-11-15T23:39:10-03:00 set -e
++ 2026-11-15T23:39:10-03:00 cat /tmp/tmp.iSaDDxRi2l/stdout.txt
++ 2026-11-15T23:39:10-03:00 cat /tmp/tmp.iSaDDxRi2l/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:10-03:00 test 1 -ne 0
++ 2026-11-15T23:39:10-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:10-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:10-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:10-03:00 rm -rf /tmp/tmp.iSaDDxRi2l
++ 2026-11-15T23:39:10-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:10-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 9
+STAGE=7 BATCH=17 REPETITION=9
++ 2026-11-15T23:39:10-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:10-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:10-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.HSKWo8reFK/banker
++ 2026-11-15T23:39:11-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:11-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:11-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:11-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:11-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.HSKWo8reFK/customer.txt
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.HSKWo8reFK/commands.txt
++ 2026-11-15T23:39:11-03:00 cd /tmp/tmp.HSKWo8reFK
++ 2026-11-15T23:39:11-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:11-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.HSKWo8reFK/result.txt
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.HSKWo8reFK/customer.txt
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.HSKWo8reFK/commands.txt
++ 2026-11-15T23:39:11-03:00 cd /tmp/tmp.HSKWo8reFK
++ 2026-11-15T23:39:11-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:11-03:00 set +e
++ 2026-11-15T23:39:11-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:11-03:00 status=1
++ 2026-11-15T23:39:11-03:00 set -e
++ 2026-11-15T23:39:11-03:00 cat /tmp/tmp.HSKWo8reFK/stdout.txt
++ 2026-11-15T23:39:11-03:00 cat /tmp/tmp.HSKWo8reFK/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:11-03:00 test 1 -ne 0
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.HSKWo8reFK/customer.txt
++ 2026-11-15T23:39:11-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.HSKWo8reFK/commands.txt
++ 2026-11-15T23:39:11-03:00 cd /tmp/tmp.HSKWo8reFK
++ 2026-11-15T23:39:11-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:11-03:00 set +e
++ 2026-11-15T23:39:11-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:11-03:00 status=1
++ 2026-11-15T23:39:11-03:00 set -e
++ 2026-11-15T23:39:11-03:00 cat /tmp/tmp.HSKWo8reFK/stdout.txt
++ 2026-11-15T23:39:11-03:00 cat /tmp/tmp.HSKWo8reFK/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:11-03:00 test 1 -ne 0
++ 2026-11-15T23:39:11-03:00 rm -f /tmp/tmp.HSKWo8reFK/customer.txt /tmp/tmp.HSKWo8reFK/commands.txt
++ 2026-11-15T23:39:11-03:00 cd /tmp/tmp.HSKWo8reFK
++ 2026-11-15T23:39:11-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:11-03:00 set +e
++ 2026-11-15T23:39:11-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:11-03:00 status=1
++ 2026-11-15T23:39:11-03:00 set -e
++ 2026-11-15T23:39:11-03:00 cat /tmp/tmp.HSKWo8reFK/stdout.txt
++ 2026-11-15T23:39:11-03:00 cat /tmp/tmp.HSKWo8reFK/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:11-03:00 test 1 -ne 0
++ 2026-11-15T23:39:11-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:11-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:11-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:11-03:00 rm -rf /tmp/tmp.HSKWo8reFK
++ 2026-11-15T23:39:11-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:39:11-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 17 10
+STAGE=7 BATCH=17 REPETITION=10
++ 2026-11-15T23:39:11-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:39:11-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:11-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.ZPDrVLrC3M/banker
++ 2026-11-15T23:39:12-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:39:12-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:39:12-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:39:12-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:39:12-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.ZPDrVLrC3M/customer.txt
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.ZPDrVLrC3M/commands.txt
++ 2026-11-15T23:39:12-03:00 cd /tmp/tmp.ZPDrVLrC3M
++ 2026-11-15T23:39:12-03:00 ./banker 10 5 7
++ 2026-11-15T23:39:12-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.ZPDrVLrC3M/result.txt
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.ZPDrVLrC3M/customer.txt
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.ZPDrVLrC3M/commands.txt
++ 2026-11-15T23:39:12-03:00 cd /tmp/tmp.ZPDrVLrC3M
++ 2026-11-15T23:39:12-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:12-03:00 set +e
++ 2026-11-15T23:39:12-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:12-03:00 status=1
++ 2026-11-15T23:39:12-03:00 set -e
++ 2026-11-15T23:39:12-03:00 cat /tmp/tmp.ZPDrVLrC3M/stdout.txt
++ 2026-11-15T23:39:12-03:00 cat /tmp/tmp.ZPDrVLrC3M/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:39:12-03:00 test 1 -ne 0
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.ZPDrVLrC3M/customer.txt
++ 2026-11-15T23:39:12-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.ZPDrVLrC3M/commands.txt
++ 2026-11-15T23:39:12-03:00 cd /tmp/tmp.ZPDrVLrC3M
++ 2026-11-15T23:39:12-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:12-03:00 set +e
++ 2026-11-15T23:39:12-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:12-03:00 status=1
++ 2026-11-15T23:39:12-03:00 set -e
++ 2026-11-15T23:39:12-03:00 cat /tmp/tmp.ZPDrVLrC3M/stdout.txt
++ 2026-11-15T23:39:12-03:00 cat /tmp/tmp.ZPDrVLrC3M/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:39:12-03:00 test 1 -ne 0
++ 2026-11-15T23:39:12-03:00 rm -f /tmp/tmp.ZPDrVLrC3M/customer.txt /tmp/tmp.ZPDrVLrC3M/commands.txt
++ 2026-11-15T23:39:12-03:00 cd /tmp/tmp.ZPDrVLrC3M
++ 2026-11-15T23:39:12-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:39:12-03:00 set +e
++ 2026-11-15T23:39:12-03:00 ./banker 3 2 2
++ 2026-11-15T23:39:12-03:00 status=1
++ 2026-11-15T23:39:12-03:00 set -e
++ 2026-11-15T23:39:12-03:00 cat /tmp/tmp.ZPDrVLrC3M/stdout.txt
++ 2026-11-15T23:39:12-03:00 cat /tmp/tmp.ZPDrVLrC3M/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:39:12-03:00 test 1 -ne 0
++ 2026-11-15T23:39:12-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:39:12-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:39:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:39:12-03:00 rm -rf /tmp/tmp.ZPDrVLrC3M
++ 2026-11-15T23:44:12-03:00 sha256sum /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/Makefile
+90924d5e95e1e9a8372e140f2bebd03dbb65f0f271fe581f7985aa01cbfb2aa7  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
+873552be39e445f90793db0b5675468664b9d0d46d24d4c800a4008ef15fdaa8  /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/Makefile
+++ 2026-11-15T23:44:12-03:00 seq 1 10
++ 2026-11-15T23:44:12-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:12-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 1
+STAGE=7 BATCH=18 REPETITION=1
++ 2026-11-15T23:44:12-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:12-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.aVORVebz53/banker
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.aVORVebz53/customer.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.aVORVebz53/commands.txt
++ 2026-11-15T23:44:13-03:00 cd /tmp/tmp.aVORVebz53
++ 2026-11-15T23:44:13-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:13-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.aVORVebz53/result.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.aVORVebz53/customer.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.aVORVebz53/commands.txt
++ 2026-11-15T23:44:13-03:00 cd /tmp/tmp.aVORVebz53
++ 2026-11-15T23:44:13-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 set +e
++ 2026-11-15T23:44:13-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 status=1
++ 2026-11-15T23:44:13-03:00 set -e
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.aVORVebz53/stdout.txt
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.aVORVebz53/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:13-03:00 test 1 -ne 0
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.aVORVebz53/customer.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.aVORVebz53/commands.txt
++ 2026-11-15T23:44:13-03:00 cd /tmp/tmp.aVORVebz53
++ 2026-11-15T23:44:13-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 set +e
++ 2026-11-15T23:44:13-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 status=1
++ 2026-11-15T23:44:13-03:00 set -e
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.aVORVebz53/stdout.txt
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.aVORVebz53/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:13-03:00 test 1 -ne 0
++ 2026-11-15T23:44:13-03:00 rm -f /tmp/tmp.aVORVebz53/customer.txt /tmp/tmp.aVORVebz53/commands.txt
++ 2026-11-15T23:44:13-03:00 cd /tmp/tmp.aVORVebz53
++ 2026-11-15T23:44:13-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 set +e
++ 2026-11-15T23:44:13-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 status=1
++ 2026-11-15T23:44:13-03:00 set -e
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.aVORVebz53/stdout.txt
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.aVORVebz53/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:13-03:00 test 1 -ne 0
++ 2026-11-15T23:44:13-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:13-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:13-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:13-03:00 rm -rf /tmp/tmp.aVORVebz53
++ 2026-11-15T23:44:13-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:13-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 2
+STAGE=7 BATCH=18 REPETITION=2
++ 2026-11-15T23:44:13-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:13-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:13-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.DlY1HnReiC/banker
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:13-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.DlY1HnReiC/customer.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.DlY1HnReiC/commands.txt
++ 2026-11-15T23:44:13-03:00 cd /tmp/tmp.DlY1HnReiC
++ 2026-11-15T23:44:13-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:13-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.DlY1HnReiC/result.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.DlY1HnReiC/customer.txt
++ 2026-11-15T23:44:13-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.DlY1HnReiC/commands.txt
++ 2026-11-15T23:44:13-03:00 cd /tmp/tmp.DlY1HnReiC
++ 2026-11-15T23:44:13-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 set +e
++ 2026-11-15T23:44:13-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:13-03:00 status=1
++ 2026-11-15T23:44:13-03:00 set -e
++ 2026-11-15T23:44:13-03:00 cat /tmp/tmp.DlY1HnReiC/stdout.txt
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.DlY1HnReiC/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:14-03:00 test 1 -ne 0
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.DlY1HnReiC/customer.txt
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.DlY1HnReiC/commands.txt
++ 2026-11-15T23:44:14-03:00 cd /tmp/tmp.DlY1HnReiC
++ 2026-11-15T23:44:14-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 set +e
++ 2026-11-15T23:44:14-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 status=1
++ 2026-11-15T23:44:14-03:00 set -e
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.DlY1HnReiC/stdout.txt
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.DlY1HnReiC/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:14-03:00 test 1 -ne 0
++ 2026-11-15T23:44:14-03:00 rm -f /tmp/tmp.DlY1HnReiC/customer.txt /tmp/tmp.DlY1HnReiC/commands.txt
++ 2026-11-15T23:44:14-03:00 cd /tmp/tmp.DlY1HnReiC
++ 2026-11-15T23:44:14-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 set +e
++ 2026-11-15T23:44:14-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 status=1
++ 2026-11-15T23:44:14-03:00 set -e
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.DlY1HnReiC/stdout.txt
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.DlY1HnReiC/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:14-03:00 test 1 -ne 0
++ 2026-11-15T23:44:14-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:14-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:14-03:00 rm -rf /tmp/tmp.DlY1HnReiC
++ 2026-11-15T23:44:14-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:14-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 3
+STAGE=7 BATCH=18 REPETITION=3
++ 2026-11-15T23:44:14-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.iw6F0CIH88/banker
++ 2026-11-15T23:44:14-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:14-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:14-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:14-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:14-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.iw6F0CIH88/customer.txt
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.iw6F0CIH88/commands.txt
++ 2026-11-15T23:44:14-03:00 cd /tmp/tmp.iw6F0CIH88
++ 2026-11-15T23:44:14-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:14-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.iw6F0CIH88/result.txt
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.iw6F0CIH88/customer.txt
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.iw6F0CIH88/commands.txt
++ 2026-11-15T23:44:14-03:00 cd /tmp/tmp.iw6F0CIH88
++ 2026-11-15T23:44:14-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 set +e
++ 2026-11-15T23:44:14-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 status=1
++ 2026-11-15T23:44:14-03:00 set -e
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.iw6F0CIH88/stdout.txt
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.iw6F0CIH88/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:14-03:00 test 1 -ne 0
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.iw6F0CIH88/customer.txt
++ 2026-11-15T23:44:14-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.iw6F0CIH88/commands.txt
++ 2026-11-15T23:44:14-03:00 cd /tmp/tmp.iw6F0CIH88
++ 2026-11-15T23:44:14-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 set +e
++ 2026-11-15T23:44:14-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 status=1
++ 2026-11-15T23:44:14-03:00 set -e
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.iw6F0CIH88/stdout.txt
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.iw6F0CIH88/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:14-03:00 test 1 -ne 0
++ 2026-11-15T23:44:14-03:00 rm -f /tmp/tmp.iw6F0CIH88/customer.txt /tmp/tmp.iw6F0CIH88/commands.txt
++ 2026-11-15T23:44:14-03:00 cd /tmp/tmp.iw6F0CIH88
++ 2026-11-15T23:44:14-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 set +e
++ 2026-11-15T23:44:14-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:14-03:00 status=1
++ 2026-11-15T23:44:14-03:00 set -e
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.iw6F0CIH88/stdout.txt
++ 2026-11-15T23:44:14-03:00 cat /tmp/tmp.iw6F0CIH88/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:14-03:00 test 1 -ne 0
++ 2026-11-15T23:44:14-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:14-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:14-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:14-03:00 rm -rf /tmp/tmp.iw6F0CIH88
++ 2026-11-15T23:44:14-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:14-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 4
+STAGE=7 BATCH=18 REPETITION=4
++ 2026-11-15T23:44:14-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.7vBagJ2e12/banker
++ 2026-11-15T23:44:15-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:15-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:15-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:15-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:15-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.7vBagJ2e12/customer.txt
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.7vBagJ2e12/commands.txt
++ 2026-11-15T23:44:15-03:00 cd /tmp/tmp.7vBagJ2e12
++ 2026-11-15T23:44:15-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:15-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.7vBagJ2e12/result.txt
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.7vBagJ2e12/customer.txt
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.7vBagJ2e12/commands.txt
++ 2026-11-15T23:44:15-03:00 cd /tmp/tmp.7vBagJ2e12
++ 2026-11-15T23:44:15-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:15-03:00 set +e
++ 2026-11-15T23:44:15-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:15-03:00 status=1
++ 2026-11-15T23:44:15-03:00 set -e
++ 2026-11-15T23:44:15-03:00 cat /tmp/tmp.7vBagJ2e12/stdout.txt
++ 2026-11-15T23:44:15-03:00 cat /tmp/tmp.7vBagJ2e12/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:15-03:00 test 1 -ne 0
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.7vBagJ2e12/customer.txt
++ 2026-11-15T23:44:15-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.7vBagJ2e12/commands.txt
++ 2026-11-15T23:44:15-03:00 cd /tmp/tmp.7vBagJ2e12
++ 2026-11-15T23:44:15-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:15-03:00 set +e
++ 2026-11-15T23:44:15-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:15-03:00 status=1
++ 2026-11-15T23:44:15-03:00 set -e
++ 2026-11-15T23:44:15-03:00 cat /tmp/tmp.7vBagJ2e12/stdout.txt
++ 2026-11-15T23:44:15-03:00 cat /tmp/tmp.7vBagJ2e12/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:15-03:00 test 1 -ne 0
++ 2026-11-15T23:44:15-03:00 rm -f /tmp/tmp.7vBagJ2e12/customer.txt /tmp/tmp.7vBagJ2e12/commands.txt
++ 2026-11-15T23:44:15-03:00 cd /tmp/tmp.7vBagJ2e12
++ 2026-11-15T23:44:15-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:15-03:00 set +e
++ 2026-11-15T23:44:15-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:15-03:00 status=1
++ 2026-11-15T23:44:15-03:00 set -e
++ 2026-11-15T23:44:15-03:00 cat /tmp/tmp.7vBagJ2e12/stdout.txt
++ 2026-11-15T23:44:15-03:00 cat /tmp/tmp.7vBagJ2e12/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:15-03:00 test 1 -ne 0
++ 2026-11-15T23:44:15-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:15-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:15-03:00 rm -rf /tmp/tmp.7vBagJ2e12
++ 2026-11-15T23:44:15-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:15-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 5
+STAGE=7 BATCH=18 REPETITION=5
++ 2026-11-15T23:44:15-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:15-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.oU2UGV3aet/banker
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.oU2UGV3aet/customer.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.oU2UGV3aet/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.oU2UGV3aet
++ 2026-11-15T23:44:16-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:16-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.oU2UGV3aet/result.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.oU2UGV3aet/customer.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.oU2UGV3aet/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.oU2UGV3aet
++ 2026-11-15T23:44:16-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 set +e
++ 2026-11-15T23:44:16-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 status=1
++ 2026-11-15T23:44:16-03:00 set -e
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.oU2UGV3aet/stdout.txt
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.oU2UGV3aet/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:16-03:00 test 1 -ne 0
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.oU2UGV3aet/customer.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.oU2UGV3aet/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.oU2UGV3aet
++ 2026-11-15T23:44:16-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 set +e
++ 2026-11-15T23:44:16-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 status=1
++ 2026-11-15T23:44:16-03:00 set -e
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.oU2UGV3aet/stdout.txt
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.oU2UGV3aet/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:16-03:00 test 1 -ne 0
++ 2026-11-15T23:44:16-03:00 rm -f /tmp/tmp.oU2UGV3aet/customer.txt /tmp/tmp.oU2UGV3aet/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.oU2UGV3aet
++ 2026-11-15T23:44:16-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 set +e
++ 2026-11-15T23:44:16-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 status=1
++ 2026-11-15T23:44:16-03:00 set -e
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.oU2UGV3aet/stdout.txt
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.oU2UGV3aet/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:16-03:00 test 1 -ne 0
++ 2026-11-15T23:44:16-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:16-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:16-03:00 rm -rf /tmp/tmp.oU2UGV3aet
++ 2026-11-15T23:44:16-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:16-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 6
+STAGE=7 BATCH=18 REPETITION=6
++ 2026-11-15T23:44:16-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:16-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.I0fgI0QC57/banker
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:16-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.I0fgI0QC57/customer.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.I0fgI0QC57/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.I0fgI0QC57
++ 2026-11-15T23:44:16-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:16-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.I0fgI0QC57/result.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.I0fgI0QC57/customer.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.I0fgI0QC57/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.I0fgI0QC57
++ 2026-11-15T23:44:16-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 set +e
++ 2026-11-15T23:44:16-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 status=1
++ 2026-11-15T23:44:16-03:00 set -e
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.I0fgI0QC57/stdout.txt
++ 2026-11-15T23:44:16-03:00 cat /tmp/tmp.I0fgI0QC57/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:16-03:00 test 1 -ne 0
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.I0fgI0QC57/customer.txt
++ 2026-11-15T23:44:16-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.I0fgI0QC57/commands.txt
++ 2026-11-15T23:44:16-03:00 cd /tmp/tmp.I0fgI0QC57
++ 2026-11-15T23:44:16-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:16-03:00 set +e
++ 2026-11-15T23:44:16-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 status=1
++ 2026-11-15T23:44:17-03:00 set -e
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.I0fgI0QC57/stdout.txt
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.I0fgI0QC57/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:17-03:00 test 1 -ne 0
++ 2026-11-15T23:44:17-03:00 rm -f /tmp/tmp.I0fgI0QC57/customer.txt /tmp/tmp.I0fgI0QC57/commands.txt
++ 2026-11-15T23:44:17-03:00 cd /tmp/tmp.I0fgI0QC57
++ 2026-11-15T23:44:17-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 set +e
++ 2026-11-15T23:44:17-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 status=1
++ 2026-11-15T23:44:17-03:00 set -e
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.I0fgI0QC57/stdout.txt
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.I0fgI0QC57/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:17-03:00 test 1 -ne 0
++ 2026-11-15T23:44:17-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:17-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:17-03:00 rm -rf /tmp/tmp.I0fgI0QC57
++ 2026-11-15T23:44:17-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:17-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 7
+STAGE=7 BATCH=18 REPETITION=7
++ 2026-11-15T23:44:17-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.YK3rcYekIc/banker
++ 2026-11-15T23:44:17-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:17-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:17-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:17-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:17-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.YK3rcYekIc/customer.txt
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.YK3rcYekIc/commands.txt
++ 2026-11-15T23:44:17-03:00 cd /tmp/tmp.YK3rcYekIc
++ 2026-11-15T23:44:17-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:17-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.YK3rcYekIc/result.txt
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.YK3rcYekIc/customer.txt
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.YK3rcYekIc/commands.txt
++ 2026-11-15T23:44:17-03:00 cd /tmp/tmp.YK3rcYekIc
++ 2026-11-15T23:44:17-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 set +e
++ 2026-11-15T23:44:17-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 status=1
++ 2026-11-15T23:44:17-03:00 set -e
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.YK3rcYekIc/stdout.txt
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.YK3rcYekIc/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:17-03:00 test 1 -ne 0
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.YK3rcYekIc/customer.txt
++ 2026-11-15T23:44:17-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.YK3rcYekIc/commands.txt
++ 2026-11-15T23:44:17-03:00 cd /tmp/tmp.YK3rcYekIc
++ 2026-11-15T23:44:17-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 set +e
++ 2026-11-15T23:44:17-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 status=1
++ 2026-11-15T23:44:17-03:00 set -e
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.YK3rcYekIc/stdout.txt
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.YK3rcYekIc/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:17-03:00 test 1 -ne 0
++ 2026-11-15T23:44:17-03:00 rm -f /tmp/tmp.YK3rcYekIc/customer.txt /tmp/tmp.YK3rcYekIc/commands.txt
++ 2026-11-15T23:44:17-03:00 cd /tmp/tmp.YK3rcYekIc
++ 2026-11-15T23:44:17-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 set +e
++ 2026-11-15T23:44:17-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:17-03:00 status=1
++ 2026-11-15T23:44:17-03:00 set -e
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.YK3rcYekIc/stdout.txt
++ 2026-11-15T23:44:17-03:00 cat /tmp/tmp.YK3rcYekIc/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:17-03:00 test 1 -ne 0
++ 2026-11-15T23:44:17-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:17-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:17-03:00 rm -rf /tmp/tmp.YK3rcYekIc
++ 2026-11-15T23:44:17-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:17-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 8
+STAGE=7 BATCH=18 REPETITION=8
++ 2026-11-15T23:44:17-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:17-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.v9dKe8QQss/banker
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.v9dKe8QQss/customer.txt
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.v9dKe8QQss/commands.txt
++ 2026-11-15T23:44:18-03:00 cd /tmp/tmp.v9dKe8QQss
++ 2026-11-15T23:44:18-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:18-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.v9dKe8QQss/result.txt
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.v9dKe8QQss/customer.txt
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.v9dKe8QQss/commands.txt
++ 2026-11-15T23:44:18-03:00 cd /tmp/tmp.v9dKe8QQss
++ 2026-11-15T23:44:18-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:18-03:00 set +e
++ 2026-11-15T23:44:18-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:18-03:00 status=1
++ 2026-11-15T23:44:18-03:00 set -e
++ 2026-11-15T23:44:18-03:00 cat /tmp/tmp.v9dKe8QQss/stdout.txt
++ 2026-11-15T23:44:18-03:00 cat /tmp/tmp.v9dKe8QQss/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:18-03:00 test 1 -ne 0
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.v9dKe8QQss/customer.txt
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.v9dKe8QQss/commands.txt
++ 2026-11-15T23:44:18-03:00 cd /tmp/tmp.v9dKe8QQss
++ 2026-11-15T23:44:18-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:18-03:00 set +e
++ 2026-11-15T23:44:18-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:18-03:00 status=1
++ 2026-11-15T23:44:18-03:00 set -e
++ 2026-11-15T23:44:18-03:00 cat /tmp/tmp.v9dKe8QQss/stdout.txt
++ 2026-11-15T23:44:18-03:00 cat /tmp/tmp.v9dKe8QQss/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:18-03:00 test 1 -ne 0
++ 2026-11-15T23:44:18-03:00 rm -f /tmp/tmp.v9dKe8QQss/customer.txt /tmp/tmp.v9dKe8QQss/commands.txt
++ 2026-11-15T23:44:18-03:00 cd /tmp/tmp.v9dKe8QQss
++ 2026-11-15T23:44:18-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:18-03:00 set +e
++ 2026-11-15T23:44:18-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:18-03:00 status=1
++ 2026-11-15T23:44:18-03:00 set -e
++ 2026-11-15T23:44:18-03:00 cat /tmp/tmp.v9dKe8QQss/stdout.txt
++ 2026-11-15T23:44:18-03:00 cat /tmp/tmp.v9dKe8QQss/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:18-03:00 test 1 -ne 0
++ 2026-11-15T23:44:18-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:18-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:18-03:00 rm -rf /tmp/tmp.v9dKe8QQss
++ 2026-11-15T23:44:18-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:18-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 9
+STAGE=7 BATCH=18 REPETITION=9
++ 2026-11-15T23:44:18-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:18-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:18-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.g3Lo66R77S/banker
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:18-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:19-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.g3Lo66R77S/customer.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.g3Lo66R77S/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.g3Lo66R77S
++ 2026-11-15T23:44:19-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:19-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.g3Lo66R77S/result.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.g3Lo66R77S/customer.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.g3Lo66R77S/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.g3Lo66R77S
++ 2026-11-15T23:44:19-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 set +e
++ 2026-11-15T23:44:19-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 status=1
++ 2026-11-15T23:44:19-03:00 set -e
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.g3Lo66R77S/stdout.txt
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.g3Lo66R77S/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:19-03:00 test 1 -ne 0
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.g3Lo66R77S/customer.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.g3Lo66R77S/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.g3Lo66R77S
++ 2026-11-15T23:44:19-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 set +e
++ 2026-11-15T23:44:19-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 status=1
++ 2026-11-15T23:44:19-03:00 set -e
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.g3Lo66R77S/stdout.txt
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.g3Lo66R77S/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:19-03:00 test 1 -ne 0
++ 2026-11-15T23:44:19-03:00 rm -f /tmp/tmp.g3Lo66R77S/customer.txt /tmp/tmp.g3Lo66R77S/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.g3Lo66R77S
++ 2026-11-15T23:44:19-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 set +e
++ 2026-11-15T23:44:19-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 status=1
++ 2026-11-15T23:44:19-03:00 set -e
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.g3Lo66R77S/stdout.txt
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.g3Lo66R77S/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:19-03:00 test 1 -ne 0
++ 2026-11-15T23:44:19-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:19-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:19-03:00 rm -rf /tmp/tmp.g3Lo66R77S
++ 2026-11-15T23:44:19-03:00 for repetition in $(seq 1 "$repetitions")
++ 2026-11-15T23:44:19-03:00 printf 'STAGE=%d BATCH=%d REPETITION=%d\n' 7 18 10
+STAGE=7 BATCH=18 REPETITION=10
++ 2026-11-15T23:44:19-03:00 timeout 60s bash /mnt/c/Users/PICHAU/Desktop/imps/scripts/test_stage.sh 7 /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
++ 2026-11-15T23:44:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:19-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+cc -D_POSIX_C_SOURCE=200809L -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 banker.c -o banker
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker /tmp/tmp.WYwk5NNmRX/banker
++ 2026-11-15T23:44:19-03:00 '[' 7 -eq 1 ']'
++ 2026-11-15T23:44:19-03:00 '[' 7 -eq 2 ']'
++ 2026-11-15T23:44:19-03:00 '[' 7 -eq 3 ']'
++ 2026-11-15T23:44:19-03:00 '[' 7 -eq 4 ']'
++ 2026-11-15T23:44:19-03:00 '[' 7 -eq 5 ']'
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/customer.txt /tmp/tmp.WYwk5NNmRX/customer.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/commands.txt /tmp/tmp.WYwk5NNmRX/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.WYwk5NNmRX
++ 2026-11-15T23:44:19-03:00 ./banker 10 5 7
++ 2026-11-15T23:44:19-03:00 cmp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/base/result.txt /tmp/tmp.WYwk5NNmRX/result.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/customer.txt /tmp/tmp.WYwk5NNmRX/customer.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_command/commands.txt /tmp/tmp.WYwk5NNmRX/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.WYwk5NNmRX
++ 2026-11-15T23:44:19-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 set +e
++ 2026-11-15T23:44:19-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 status=1
++ 2026-11-15T23:44:19-03:00 set -e
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.WYwk5NNmRX/stdout.txt
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.WYwk5NNmRX/stderr.txt
+Error: commands.txt contains an unknown command
++ 2026-11-15T23:44:19-03:00 test 1 -ne 0
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/customer.txt /tmp/tmp.WYwk5NNmRX/customer.txt
++ 2026-11-15T23:44:19-03:00 cp /mnt/c/Users/PICHAU/Desktop/imps/tests/fixtures/invalid_customer/commands.txt /tmp/tmp.WYwk5NNmRX/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.WYwk5NNmRX
++ 2026-11-15T23:44:19-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 set +e
++ 2026-11-15T23:44:19-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 status=1
++ 2026-11-15T23:44:19-03:00 set -e
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.WYwk5NNmRX/stdout.txt
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.WYwk5NNmRX/stderr.txt
+Error: a command references a customer that does not exist
++ 2026-11-15T23:44:19-03:00 test 1 -ne 0
++ 2026-11-15T23:44:19-03:00 rm -f /tmp/tmp.WYwk5NNmRX/customer.txt /tmp/tmp.WYwk5NNmRX/commands.txt
++ 2026-11-15T23:44:19-03:00 cd /tmp/tmp.WYwk5NNmRX
++ 2026-11-15T23:44:19-03:00 expect_failure ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 set +e
++ 2026-11-15T23:44:19-03:00 ./banker 3 2 2
++ 2026-11-15T23:44:19-03:00 status=1
++ 2026-11-15T23:44:19-03:00 set -e
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.WYwk5NNmRX/stdout.txt
++ 2026-11-15T23:44:19-03:00 cat /tmp/tmp.WYwk5NNmRX/stderr.txt
+Error: customer.txt could not be opened
++ 2026-11-15T23:44:20-03:00 test 1 -ne 0
++ 2026-11-15T23:44:20-03:00 grep -Eq '//|/\*|\*/' /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada/banker.c
++ 2026-11-15T23:44:20-03:00 printf 'PASS stage %s\n' 7
+PASS stage 7
++ 2026-11-15T23:44:20-03:00 make -C /mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada clean
+make: Entering directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
+rm -f banker result.txt
+make: Leaving directory '/mnt/c/Users/PICHAU/Desktop/imps/outputs/02_sete_etapas/07_entrega_documentada'
++ 2026-11-15T23:44:20-03:00 rm -rf /tmp/tmp.WYwk5NNmRX
